@@ -1,0 +1,407 @@
+/* ═══════════════════════════════════════════════════════════════
+   PompinHouse - Custom Styles
+   Estilos adicionales a Tailwind CSS
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Variables CSS */
+:root {
+  --primary: #2C5F8D;
+  --secondary: #27AE60;
+  --accent: #E67E22;
+  --dark: #2C3E50;
+  --gray: #7F8C8D;
+  --light-bg: #F8F9FA;
+  --white: #FFFFFF;
+  --success: #2ECC71;
+  --warning: #F39C12;
+  --danger: #E74C3C;
+  --whatsapp: #25D366;
+}
+
+/* Reset y configuración base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  color: var(--dark);
+  overflow-x: hidden;
+}
+
+/* Mejoras de accesibilidad */
+:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   ANIMACIONES
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Fade in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+/* Slide up */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out 0.2s both;
+}
+
+.animate-slide-up-delay {
+  animation: slideUp 0.8s ease-out 0.4s both;
+}
+
+/* Bounce suave */
+@keyframes bounceSlow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounceSlow 2s ease-in-out infinite;
+}
+
+/* Pulse suave */
+@keyframes pulseSlow {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 2s ease-in-out infinite;
+}
+
+/* Animación al hacer scroll */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   HERO SECTION
+   ═══════════════════════════════════════════════════════════════ */
+
+#hero {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Efecto parallax */
+@media (min-width: 768px) {
+  #hero .bg-cover {
+    background-attachment: fixed;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   TABS
+   ═══════════════════════════════════════════════════════════════ */
+
+.tab-button {
+  color: var(--gray);
+  border-bottom: 3px solid transparent;
+  position: relative;
+}
+
+.tab-button.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+.tab-button:hover {
+  color: var(--primary);
+}
+
+.tab-content {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   ACORDEÓN
+   ═══════════════════════════════════════════════════════════════ */
+
+.accordion-content {
+  transition: max-height 0.3s ease-out;
+}
+
+.accordion-content.open {
+  max-height: 1000px;
+}
+
+.accordion-icon {
+  transition: transform 0.3s ease;
+}
+
+.accordion-icon.rotate {
+  transform: rotate(45deg);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   WHATSAPP FLOATING BUTTON
+   ═══════════════════════════════════════════════════════════════ */
+
+#whatsapp-float {
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+}
+
+#whatsapp-float:hover {
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   LOADING SPINNER
+   ═══════════════════════════════════════════════════════════════ */
+
+#loading-spinner {
+  transition: opacity 0.5s ease-out;
+}
+
+#loading-spinner.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   CARDS
+   ═══════════════════════════════════════════════════════════════ */
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BOTONES
+   ═══════════════════════════════════════════════════════════════ */
+
+button,
+a.button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 44px;
+  min-width: 44px;
+}
+
+button:active,
+a.button:active {
+  transform: translateY(0);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   UTILIDADES
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Sombras */
+.shadow-subtle {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.shadow-medium {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.shadow-strong {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Mobile: 320px - 767px */
+@media (max-width: 767px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  p {
+    font-size: 0.875rem;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  section {
+    padding: 60px 0;
+  }
+
+  #whatsapp-float {
+    width: 56px;
+    height: 56px;
+  }
+
+  #whatsapp-float i {
+    font-size: 28px;
+  }
+}
+
+/* Tablet: 768px - 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  #hero {
+    min-height: 90vh;
+  }
+}
+
+/* Desktop: 1024px+ */
+@media (min-width: 1024px) {
+  /* Efectos hover solo en desktop */
+  .hover-lift:hover {
+    transform: translateY(-8px);
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   IMPRESIÓN
+   ═══════════════════════════════════════════════════════════════ */
+
+@media print {
+  #whatsapp-float,
+  #loading-spinner,
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   ACCESIBILIDAD
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Modo de alto contraste */
+@media (prefers-contrast: high) {
+  :root {
+    --primary: #1a4d7a;
+    --secondary: #1e8449;
+  }
+}
+
+/* Respeto por preferencias de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   TOAST NOTIFICATIONS
+   ═══════════════════════════════════════════════════════════════ */
+
+#toast {
+  min-width: 250px;
+}
+
+#toast.show {
+  transform: translateX(0);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   OPTIMIZACIONES DE PERFORMANCE
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Willchange para elementos animados */
+.animate-on-scroll,
+.tab-content,
+.accordion-content {
+  will-change: transform, opacity;
+}
+
+/* Render optimization */
+img,
+iframe {
+  content-visibility: auto;
+}

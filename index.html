@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary Meta Tags -->
+  <title>PompinHouse - Tu refugio en Ushuaia | Alojamiento en el Fin del Mundo</title>
+  <meta name="title" content="PompinHouse - Tu refugio en Ushuaia | Alojamiento en el Fin del Mundo">
+  <meta name="description" content="Alojamiento acogedor en Ushuaia, Tierra del Fuego. Ubicación estratégica a 10 minutos del centro. WiFi, calefacción, guía turística incluida.">
+  <meta name="keywords" content="alojamiento ushuaia, hospedaje ushuaia, cabaña ushuaia, airbnb ushuaia, fin del mundo, patagonia, tierra del fuego">
+  <meta name="author" content="PompinHouse">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pompinhouse.com/">
+  <meta property="og:title" content="PompinHouse - Tu refugio en Ushuaia">
+  <meta property="og:description" content="Alojamiento acogedor en el Fin del Mundo. WiFi, calefacción, guía turística incluida.">
+  <meta property="og:image" content="https://pompinhouse.com/assets/images/og-image.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://pompinhouse.com/">
+  <meta property="twitter:title" content="PompinHouse - Tu refugio en Ushuaia">
+  <meta property="twitter:description" content="Alojamiento acogedor en el Fin del Mundo.">
+  <meta property="twitter:image" content="https://pompinhouse.com/assets/images/og-image.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon.png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2C5F8D',
+            secondary: '#27AE60',
+            accent: '#E67E22',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="font-['Inter',sans-serif]">
+
+  <!-- Loading Spinner -->
+  <div id="loading-spinner" class="fixed inset-0 bg-white z-[10000] flex flex-col items-center justify-center">
+    <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-primary"></div>
+    <p class="mt-4 text-xl font-semibold text-primary">PompinHouse</p>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECCIÓN 1: HERO -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <section id="hero" class="relative h-screen flex items-center justify-center overflow-hidden">
+    <!-- Background con overlay -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black/50 to-black/50 z-0"></div>
+    <div class="absolute inset-0 bg-cover bg-center z-[-1]"
+         style="background-image: url('https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=2070'); background-attachment: fixed;">
+    </div>
+
+    <!-- Contenido -->
+    <div class="relative z-10 text-center px-4 animate-fade-in">
+      <div class="text-6xl md:text-8xl mb-6 animate-bounce-slow">
+        <i class="fas fa-home text-white"></i>
+      </div>
+      <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 animate-slide-up">
+        Bienvenido a PompinHouse
+      </h1>
+      <p class="text-xl md:text-3xl text-white/80 font-light mb-8 animate-slide-up-delay">
+        Tu refugio en el Fin del Mundo
+      </p>
+      <a href="#ubicacion" class="inline-block bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-xl animate-pulse-slow">
+        <i class="fas fa-map-marker-alt mr-2"></i>Ver ubicación
+      </a>
+
+      <!-- Scroll indicator -->
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <i class="fas fa-chevron-down text-white text-2xl opacity-70"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECCIÓN 2: UBICACIÓN -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <section id="ubicacion" class="py-16 md:py-20 bg-white">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <!-- Header -->
+      <div class="text-center mb-12 animate-on-scroll">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
+          <i class="fas fa-map-marker-alt mr-2"></i>¿Dónde estamos?
+        </h2>
+        <p class="text-lg md:text-xl text-gray-600">
+          Gobernador Cornejo 325<br>
+          Ushuaia, Tierra del Fuego
+        </p>
+      </div>
+
+      <!-- Mapa principal -->
+      <div class="mb-12 animate-on-scroll">
+        <iframe
+          width="100%"
+          height="450"
+          style="border:0; border-radius:16px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"
+          loading="lazy"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2396.9!2d-68.305!3d-54.807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTTCsDQ4JzI1LjIiUyA2OMKwMTgnMTguMCJX!5e0!3m2!1ses!2sar!4v1234567890!5m2!1ses!2sar"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <!-- Grid de distancias -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <!-- Card 1: Centro -->
+        <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-on-scroll">
+          <div class="text-4xl mb-4 text-primary">
+            <i class="fas fa-city"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Centro Ushuaia</h3>
+          <div class="border-t-2 border-gray-200 my-3"></div>
+          <p class="text-3xl font-bold text-primary mb-2">10 minutos</p>
+          <div class="border-t-2 border-gray-200 my-3"></div>
+          <p class="text-sm text-gray-600 mb-4">
+            <i class="fas fa-walking mr-1"></i>Caminando
+          </p>
+          <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornejo+325,Ushuaia&destination=Centro+Ushuaia&travelmode=walking"
+             target="_blank"
+             class="text-primary hover:text-primary/80 font-semibold text-sm">
+            Ver ruta <i class="fas fa-arrow-right ml-1"></i>
+          </a>
+        </div>
+
+        <!-- Card 2: Aeropuerto -->
+        <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-on-scroll">
+          <div class="text-4xl mb-4 text-primary">
+            <i class="fas fa-plane"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Aeropuerto</h3>
+          <div class="border-t-2 border-gray-200 my-3"></div>
+          <p class="text-3xl font-bold text-primary mb-2">15 minutos</p>
+          <div class="border-t-2 border-gray-200 my-3"></div>
+          <p class="text-sm text-gray-600 mb-4">
+            <i class="fas fa-car mr-1"></i>En auto
+          </p>
+          <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornejo+325,Ushuaia&destination=Aeropuerto+Ushuaia&travelmode=driving"
+             target="_blank"
+             class="text-primary hover:text-primary/80 font-semibold text-sm">
+            Ver ruta <i class="fas fa-arrow-right ml-1"></i>
+          </a>
+        </div>
+
+        <!-- Card 3: Museo -->
+        <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-on-scroll">
+          <div class="text-4xl mb-4 text-primary">
+            <i class="fas fa-landmark"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Museo Marítimo</h3>
+          <div class="border-t-2 border-gray-200 my-3"></div>
+          <p class="text-3xl font-bold text-primary mb-2">12 minutos</p>
+          <div class="border-t-2 border-gray-200 my-3"></div>
+          <p class="text-sm text-gray-600 mb-4">
+            <i class="fas fa-walking mr-1"></i>Caminando
+          </p>
+          <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornejo+325,Ushuaia&destination=Museo+Maritimo+Ushuaia&travelmode=walking"
+             target="_blank"
+             class="text-primary hover:text-primary/80 font-semibold text-sm">
+            Ver ruta <i class="fas fa-arrow-right ml-1"></i>
+          </a>
+        </div>
+
+        <!-- Card 4: Supermercado -->
+        <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-on-scroll">
+          <div class="text-4xl mb-4 text-primary">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Supermercado</h3>
+          <div class="border-t-2 border-gray-200 my-3"></div>
+          <p class="text-3xl font-bold text-primary mb-2">3 minutos</p>
+          <div class="border-t-2 border-gray-200 my-3"></div>
+          <p class="text-sm text-gray-600 mb-4">
+            <i class="fas fa-walking mr-1"></i>Caminando
+          </p>
+          <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornejo+325,Ushuaia&destination=Supermercado+Ushuaia&travelmode=walking"
+             target="_blank"
+             class="text-primary hover:text-primary/80 font-semibold text-sm">
+            Ver ruta <i class="fas fa-arrow-right ml-1"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Botón Google Maps -->
+      <div class="text-center animate-on-scroll">
+        <a href="https://goo.gl/maps/your-short-link"
+           target="_blank"
+           class="inline-block bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 w-full md:w-auto">
+          <i class="fas fa-mobile-alt mr-2"></i>Abrir en Google Maps
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECCIÓN 3: INFO DE ESTADÍA -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <section id="info-estadia" class="py-16 md:py-20 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <!-- Header -->
+      <div class="text-center mb-12 animate-on-scroll">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
+          <i class="fas fa-key mr-2"></i>Información de tu estadía
+        </h2>
+      </div>
+
+      <!-- Grid 2x2 -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Card 1: Check-in/out -->
+        <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300 animate-on-scroll">
+          <div class="text-4xl mb-4 text-primary">
+            <i class="fas fa-clock"></i>
+          </div>
+          <div class="space-y-4">
+            <div>
+              <h3 class="font-bold text-lg mb-1">Check-in</h3>
+              <p class="text-2xl font-semibold text-gray-700">14:00 hs</p>
+            </div>
+            <div class="border-t-2 border-gray-200"></div>
+            <div>
+              <h3 class="font-bold text-lg mb-1">Check-out</h3>
+              <p class="text-2xl font-semibold text-gray-700">10:00 hs</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: WiFi -->
+        <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300 animate-on-scroll">
+          <div class="text-4xl mb-4 text-primary">
+            <i class="fas fa-wifi"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-4">WiFi</h3>
+          <div class="space-y-3">
+            <div>
+              <p class="text-sm text-gray-600">Red:</p>
+              <p class="font-semibold text-gray-800">Remolcoy</p>
+            </div>
+            <div>
+              <p class="text-sm text-gray-600">Contraseña:</p>
+              <p class="font-semibold text-gray-800" id="wifi-password">faltacontraseña</p>
+            </div>
+            <button onclick="copyWifiPassword()"
+                    class="bg-secondary hover:bg-secondary/90 text-white font-semibold px-6 py-2 rounded-lg transition-all duration-300 w-full">
+              <i class="fas fa-copy mr-2"></i>Copiar contraseña
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 3: Contacto -->
+        <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300 animate-on-scroll">
+          <div class="text-4xl mb-4 text-primary">
+            <i class="fas fa-phone"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-4">Contacto</h3>
+          <p class="text-gray-700 mb-6">Pablo</p>
+          <div class="space-y-3">
+            <a href="https://wa.me/5492901502672?text=Hola%20Pablo,%20soy%20hu%C3%A9sped%20de%20PompinHouse..."
+               target="_blank"
+               class="block bg-[#25D366] hover:bg-[#25D366]/90 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 text-center">
+              <i class="fab fa-whatsapp mr-2"></i>WhatsApp
+            </a>
+            <a href="tel:+5492901502672"
+               class="block bg-primary hover:bg-primary/90 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 text-center">
+              <i class="fas fa-phone mr-2"></i>Llamar
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 4: Servicios -->
+        <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300 animate-on-scroll">
+          <div class="text-4xl mb-4 text-primary">
+            <i class="fas fa-home"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-4">Servicios</h3>
+          <ul class="space-y-3">
+            <li class="flex items-center text-gray-700">
+              <i class="fas fa-check-circle text-secondary mr-3"></i>
+              Calefacción
+            </li>
+            <li class="flex items-center text-gray-700">
+              <i class="fas fa-check-circle text-secondary mr-3"></i>
+              Cocina equipada
+            </li>
+            <li class="flex items-center text-gray-700">
+              <i class="fas fa-check-circle text-secondary mr-3"></i>
+              Ropa de cama
+            </li>
+            <li class="flex items-center text-gray-700">
+              <i class="fas fa-check-circle text-secondary mr-3"></i>
+              WiFi alta velocidad
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECCIÓN 4: QUÉ HACER EN USHUAIA -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <section id="que-hacer" class="py-16 md:py-20 bg-white">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <!-- Header -->
+      <div class="text-center mb-12 animate-on-scroll">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
+          <i class="fas fa-map-marked-alt mr-2"></i>Descubrí Ushuaia
+        </h2>
+        <p class="text-lg text-gray-600">Los mejores lugares a tu alcance</p>
+      </div>
+
+      <!-- Mapa turístico -->
+      <div class="mb-8 animate-on-scroll">
+        <!-- NOTA: Reemplazar con el iframe real de Google My Maps después de crearlo -->
+        <div class="bg-gray-200 rounded-2xl overflow-hidden shadow-lg" style="height: 600px;">
+          <div class="h-full flex items-center justify-center text-gray-500">
+            <div class="text-center p-8">
+              <i class="fas fa-map-marked-alt text-6xl mb-4"></i>
+              <p class="text-lg font-semibold">Mapa interactivo de Ushuaia</p>
+              <p class="text-sm mt-2">Crear en Google My Maps y reemplazar este placeholder</p>
+              <p class="text-xs mt-4 max-w-md">
+                Instrucciones en el código fuente para crear el mapa con todas las capas:<br>
+                Alojamiento (Azul) | Gastronomía (Rojo) | Senderos (Verde) | Cultura (Amarillo)
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Leyenda -->
+      <div class="flex flex-wrap justify-center gap-4 mb-12 animate-on-scroll">
+        <div class="flex items-center">
+          <div class="w-4 h-4 bg-blue-600 rounded-full mr-2"></div>
+          <span class="text-sm font-semibold">PompinHouse</span>
+        </div>
+        <div class="flex items-center">
+          <div class="w-4 h-4 bg-red-600 rounded-full mr-2"></div>
+          <span class="text-sm font-semibold">Gastronomía</span>
+        </div>
+        <div class="flex items-center">
+          <div class="w-4 h-4 bg-green-600 rounded-full mr-2"></div>
+          <span class="text-sm font-semibold">Senderos</span>
+        </div>
+        <div class="flex items-center">
+          <div class="w-4 h-4 bg-yellow-600 rounded-full mr-2"></div>
+          <span class="text-sm font-semibold">Cultura</span>
+        </div>
+      </div>
+
+      <!-- Tabs -->
+      <div class="animate-on-scroll">
+        <!-- Tab buttons -->
+        <div class="flex flex-col md:flex-row justify-center gap-2 mb-8 border-b-2 border-gray-200">
+          <button onclick="switchTab('senderos')"
+                  id="tab-senderos"
+                  class="tab-button active px-6 py-3 font-semibold transition-all duration-300">
+            <i class="fas fa-hiking mr-2"></i>Senderos
+          </button>
+          <button onclick="switchTab('gastronomia')"
+                  id="tab-gastronomia"
+                  class="tab-button px-6 py-3 font-semibold transition-all duration-300">
+            <i class="fas fa-utensils mr-2"></i>Gastronomía
+          </button>
+          <button onclick="switchTab('cultura')"
+                  id="tab-cultura"
+                  class="tab-button px-6 py-3 font-semibold transition-all duration-300">
+            <i class="fas fa-landmark mr-2"></i>Cultura
+          </button>
+        </div>
+
+        <!-- Tab content: Senderos -->
+        <div id="content-senderos" class="tab-content">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Sendero 1: Laguna Esmeralda -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+              <div class="h-48 bg-gradient-to-br from-green-400 to-blue-500"></div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-3 flex items-center">
+                  <i class="fas fa-hiking mr-2 text-green-600"></i>
+                  Laguna Esmeralda
+                </h3>
+                <div class="space-y-2 text-sm text-gray-600 mb-4">
+                  <p><i class="fas fa-ruler mr-2"></i>9 km (ida y vuelta)</p>
+                  <p><i class="far fa-clock mr-2"></i>4-5 horas</p>
+                  <p><i class="fas fa-chart-line mr-2"></i>Dificultad: Media</p>
+                  <p><i class="fas fa-mountain mr-2"></i>Desnivel: 220m</p>
+                  <p><i class="fas fa-map-marker-alt mr-2"></i>18 km desde PompinHouse</p>
+                </div>
+                <p class="text-gray-700 mb-4">Sendero icónico de Ushuaia con vistas espectaculares de la laguna color esmeralda.</p>
+                <a href="#" class="text-primary hover:text-primary/80 font-semibold">
+                  Ver en mapa <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Sendero 2: Glaciar Martial -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+              <div class="h-48 bg-gradient-to-br from-blue-300 to-blue-600"></div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-3 flex items-center">
+                  <i class="fas fa-hiking mr-2 text-green-600"></i>
+                  Glaciar Martial
+                </h3>
+                <div class="space-y-2 text-sm text-gray-600 mb-4">
+                  <p><i class="fas fa-ruler mr-2"></i>2.6 km (sendero)</p>
+                  <p><i class="far fa-clock mr-2"></i>1.5-2 horas</p>
+                  <p><i class="fas fa-chart-line mr-2"></i>Dificultad: Baja-Media</p>
+                  <p><i class="fas fa-mountain mr-2"></i>Desnivel: 200m</p>
+                  <p><i class="fas fa-map-marker-alt mr-2"></i>7 km desde PompinHouse</p>
+                </div>
+                <p class="text-gray-700 mb-4">Sendero accesible con vistas panorámicas de Ushuaia y el canal Beagle.</p>
+                <a href="#" class="text-primary hover:text-primary/80 font-semibold">
+                  Ver en mapa <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Sendero 3: Glaciar Vinciguerra -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+              <div class="h-48 bg-gradient-to-br from-gray-400 to-blue-700"></div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-3 flex items-center">
+                  <i class="fas fa-hiking mr-2 text-green-600"></i>
+                  Glaciar Vinciguerra
+                </h3>
+                <div class="space-y-2 text-sm text-gray-600 mb-4">
+                  <p><i class="fas fa-ruler mr-2"></i>14 km (sendero)</p>
+                  <p><i class="far fa-clock mr-2"></i>8-9 horas</p>
+                  <p><i class="fas fa-chart-line mr-2"></i>Dificultad: Alta</p>
+                  <p><i class="fas fa-mountain mr-2"></i>Desnivel: 650m</p>
+                  <p><i class="fas fa-map-marker-alt mr-2"></i>7 km desde PompinHouse</p>
+                </div>
+                <p class="text-gray-700 mb-4">Trekking desafiante con recompensas increíbles: glaciar, laguna de los Témpanos.</p>
+                <a href="#" class="text-primary hover:text-primary/80 font-semibold">
+                  Ver en mapa <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Sendero 4: Parque Nacional -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+              <div class="h-48 bg-gradient-to-br from-green-600 to-green-800"></div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-3 flex items-center">
+                  <i class="fas fa-tree mr-2 text-green-600"></i>
+                  Parque Nacional TdF
+                </h3>
+                <div class="space-y-2 text-sm text-gray-600 mb-4">
+                  <p><i class="fas fa-ruler mr-2"></i>Múltiples senderos</p>
+                  <p><i class="far fa-clock mr-2"></i>Variada</p>
+                  <p><i class="fas fa-chart-line mr-2"></i>Dificultad: Variada</p>
+                  <p><i class="fas fa-mountain mr-2"></i>Según sendero</p>
+                  <p><i class="fas fa-map-marker-alt mr-2"></i>12 km desde PompinHouse</p>
+                </div>
+                <p class="text-gray-700 mb-4">El único parque nacional con costa marítima de Argentina. Imperdible.</p>
+                <a href="#" class="text-primary hover:text-primary/80 font-semibold">
+                  Ver en mapa <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab content: Gastronomía -->
+        <div id="content-gastronomia" class="tab-content hidden">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Restaurant 1 -->
+            <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300">
+              <h3 class="text-xl font-bold mb-2">
+                <i class="fas fa-beer text-amber-600 mr-2"></i>Santos Bar
+              </h3>
+              <p class="text-gray-600 mb-2">Cervecería craft</p>
+              <p class="text-sm text-gray-500 mb-3">💰 $$ - $$$</p>
+              <p class="text-sm text-gray-700 mb-3">
+                <i class="fas fa-map-marker-alt mr-1"></i>10 min <i class="fas fa-walking ml-1"></i><br>
+                Maipú 773
+              </p>
+              <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornejo+325,Ushuaia&destination=Maipú+773,Ushuaia&travelmode=walking"
+                 target="_blank"
+                 class="text-primary hover:text-primary/80 font-semibold text-sm">
+                Ver ruta <i class="fas fa-arrow-right ml-1"></i>
+              </a>
+            </div>
+
+            <!-- Restaurant 2 -->
+            <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300">
+              <h3 class="text-xl font-bold mb-2">
+                <i class="fas fa-glass-whiskey text-green-700 mr-2"></i>Bar Dublín
+              </h3>
+              <p class="text-gray-600 mb-2">Pub irlandés</p>
+              <p class="text-sm text-gray-500 mb-3">💰 $$ - $$$</p>
+              <p class="text-sm text-gray-700 mb-3">
+                <i class="fas fa-map-marker-alt mr-1"></i>12 min <i class="fas fa-walking ml-1"></i><br>
+                9 de Julio 168
+              </p>
+              <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornejo+325,Ushuaia&destination=9+de+Julio+168,Ushuaia&travelmode=walking"
+                 target="_blank"
+                 class="text-primary hover:text-primary/80 font-semibold text-sm">
+                Ver ruta <i class="fas fa-arrow-right ml-1"></i>
+              </a>
+            </div>
+
+            <!-- Restaurant 3 -->
+            <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300">
+              <h3 class="text-xl font-bold mb-2">
+                <i class="fas fa-wine-bottle text-red-700 mr-2"></i>Bodegón Fueguino
+              </h3>
+              <p class="text-gray-600 mb-2">Cocina tradicional</p>
+              <p class="text-sm text-gray-500 mb-3">💰 $$$ - $$$$</p>
+              <p class="text-sm text-gray-700 mb-3">
+                <i class="fas fa-map-marker-alt mr-1"></i>8 min <i class="fas fa-walking ml-1"></i><br>
+                San Martín 859
+              </p>
+              <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornejo+325,Ushuaia&destination=San+Martín+859,Ushuaia&travelmode=walking"
+                 target="_blank"
+                 class="text-primary hover:text-primary/80 font-semibold text-sm">
+                Ver ruta <i class="fas fa-arrow-right ml-1"></i>
+              </a>
+            </div>
+
+            <!-- Restaurant 4 -->
+            <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300">
+              <h3 class="text-xl font-bold mb-2">
+                <i class="fas fa-drumstick-bite text-orange-700 mr-2"></i>Isabel al Disco
+              </h3>
+              <p class="text-gray-600 mb-2">Cordero patagónico</p>
+              <p class="text-sm text-gray-500 mb-3">💰 $$$ - $$$$</p>
+              <p class="text-sm text-gray-700 mb-3">
+                <i class="fas fa-map-marker-alt mr-1"></i>10 min <i class="fas fa-walking ml-1"></i><br>
+                Gob. P. Godoy 15
+              </p>
+              <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornejo+325,Ushuaia&destination=Gob.+P.+Godoy+15,Ushuaia&travelmode=walking"
+                 target="_blank"
+                 class="text-primary hover:text-primary/80 font-semibold text-sm">
+                Ver ruta <i class="fas fa-arrow-right ml-1"></i>
+              </a>
+            </div>
+
+            <!-- Restaurant 5 -->
+            <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300">
+              <h3 class="text-xl font-bold mb-2">
+                <i class="fas fa-coffee text-brown-700 mr-2"></i>Tante Sara
+              </h3>
+              <p class="text-gray-600 mb-2">Café & Pastelería</p>
+              <p class="text-sm text-gray-500 mb-3">💰 $$ - $$$</p>
+              <p class="text-sm text-gray-700 mb-3">
+                <i class="fas fa-map-marker-alt mr-1"></i>9 min <i class="fas fa-walking ml-1"></i><br>
+                San Martín 701
+              </p>
+              <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornejo+325,Ushuaia&destination=San+Martín+701,Ushuaia&travelmode=walking"
+                 target="_blank"
+                 class="text-primary hover:text-primary/80 font-semibold text-sm">
+                Ver ruta <i class="fas fa-arrow-right ml-1"></i>
+              </a>
+            </div>
+
+            <!-- Restaurant 6 -->
+            <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300">
+              <h3 class="text-xl font-bold mb-2">
+                <i class="fas fa-mug-hot text-brown-600 mr-2"></i>Ramos Generales
+              </h3>
+              <p class="text-gray-600 mb-2">Café histórico</p>
+              <p class="text-sm text-gray-500 mb-3">💰 $$ - $$$</p>
+              <p class="text-sm text-gray-700 mb-3">
+                <i class="fas fa-map-marker-alt mr-1"></i>7 min <i class="fas fa-walking ml-1"></i><br>
+                Maipú 749
+              </p>
+              <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornejo+325,Ushuaia&destination=Maipú+749,Ushuaia&travelmode=walking"
+                 target="_blank"
+                 class="text-primary hover:text-primary/80 font-semibold text-sm">
+                Ver ruta <i class="fas fa-arrow-right ml-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab content: Cultura -->
+        <div id="content-cultura" class="tab-content hidden">
+          <div class="max-w-2xl mx-auto">
+            <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+              <div class="h-64 bg-gradient-to-br from-yellow-400 to-orange-500"></div>
+              <div class="p-8">
+                <h3 class="text-2xl font-bold mb-3 flex items-center">
+                  <i class="fas fa-landmark mr-3 text-yellow-600"></i>
+                  Museo Marítimo y del Presidio
+                </h3>
+                <div class="space-y-2 text-sm text-gray-600 mb-4">
+                  <p><i class="fas fa-map-marker-alt mr-2"></i>12 min caminando</p>
+                  <p><i class="fas fa-map-signs mr-2"></i>Yaganes y Gob. Paz</p>
+                </div>
+                <p class="text-gray-700 mb-6">
+                  Museo fascinante que cuenta la historia de Ushuaia desde la época de los pueblos originarios,
+                  pasando por la prisión más austral del mundo, hasta convertirse en la ciudad que es hoy.
+                  Imperdible para entender el contexto histórico del Fin del Mundo.
+                </p>
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornejo+325,Ushuaia&destination=Museo+Maritimo+Ushuaia&travelmode=walking"
+                   target="_blank"
+                   class="text-primary hover:text-primary/80 font-semibold">
+                  Ver ruta <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botón descargar PDF -->
+      <div class="text-center mt-12 animate-on-scroll">
+        <a href="assets/documents/mapa-ushuaia.pdf"
+           download
+           class="inline-block bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300">
+          <i class="fas fa-download mr-2"></i>Descargar mapa completo PDF
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECCIÓN 5: SERVICIOS RECOMENDADOS -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <section id="servicios" class="py-16 md:py-20 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <!-- Header -->
+      <div class="text-center mb-12 animate-on-scroll">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
+          <i class="fas fa-handshake mr-2"></i>Servicios de Confianza
+        </h2>
+        <p class="text-lg text-gray-600">
+          Contactos verificados con descuento especial<br>
+          para huéspedes de PompinHouse
+        </p>
+      </div>
+
+      <!-- Grid de servicios -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+        <!-- Card 1: Guía Turístico -->
+        <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-t-4 border-green-600 animate-on-scroll">
+          <div class="flex items-start mb-6">
+            <div class="text-5xl mr-4 text-green-600">
+              <i class="fas fa-hiking"></i>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-gray-800">Marcos Vargas</h3>
+              <p class="text-gray-600">Guía de Montaña Certificado</p>
+            </div>
+          </div>
+
+          <div class="border-t-2 border-gray-200 my-4"></div>
+
+          <h4 class="font-bold text-lg mb-3">Especialidades:</h4>
+          <ul class="space-y-3 mb-6">
+            <li class="text-gray-700">
+              <i class="fas fa-check-circle text-green-600 mr-2"></i>
+              <span class="font-semibold">Laguna Esmeralda</span> (guiado)<br>
+              <span class="text-sm text-gray-600 ml-6">Desde $25.000/persona</span>
+            </li>
+            <li class="text-gray-700">
+              <i class="fas fa-check-circle text-green-600 mr-2"></i>
+              <span class="font-semibold">Glaciar Vinciguerra</span><br>
+              <span class="text-sm text-gray-600 ml-6">Desde $35.000/persona</span>
+            </li>
+            <li class="text-gray-700">
+              <i class="fas fa-check-circle text-green-600 mr-2"></i>
+              <span class="font-semibold">Trekking personalizado</span><br>
+              <span class="text-sm text-gray-600 ml-6">Consultar</span>
+            </li>
+          </ul>
+
+          <p class="text-sm italic text-gray-600 mb-6">
+            Incluye: Transporte + Equipo + Seguridad + Fotos profesionales
+          </p>
+
+          <div class="border-t-2 border-gray-200 my-4"></div>
+
+          <div class="grid grid-cols-2 gap-3 mb-6">
+            <a href="https://wa.me/5492901555555?text=Hola%20Marcos,%20soy%20hu%C3%A9sped%20de%20PompinHouse..."
+               target="_blank"
+               class="bg-[#25D366] hover:bg-[#25D366]/90 text-white font-semibold px-4 py-3 rounded-lg transition-all duration-300 text-center">
+              <i class="fab fa-whatsapp mr-2"></i>WhatsApp
+            </a>
+            <a href="tel:+5492901555555"
+               class="bg-primary hover:bg-primary/90 text-white font-semibold px-4 py-3 rounded-lg transition-all duration-300 text-center">
+              <i class="fas fa-phone mr-2"></i>Llamar
+            </a>
+          </div>
+
+          <div class="bg-green-100 border-2 border-green-600 rounded-lg p-4 text-center">
+            <p class="font-bold text-green-800">
+              <i class="fas fa-tag mr-2"></i>Descuento especial<br>
+              <span class="text-sm font-normal">mencionando PompinHouse</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2: Transporte -->
+        <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-t-4 border-blue-600 animate-on-scroll">
+          <div class="flex items-start mb-6">
+            <div class="text-5xl mr-4 text-blue-600">
+              <i class="fas fa-car"></i>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-gray-800">Xalpen Transportes</h3>
+              <p class="text-gray-600">Traslados y Excursiones</p>
+            </div>
+          </div>
+
+          <div class="border-t-2 border-gray-200 my-4"></div>
+
+          <h4 class="font-bold text-lg mb-3">Servicios:</h4>
+          <ul class="space-y-3 mb-6">
+            <li class="text-gray-700">
+              <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+              <span class="font-semibold">Aeropuerto ↔ PompinHouse</span><br>
+              <span class="text-sm text-gray-600 ml-6">Consultar</span>
+            </li>
+            <li class="text-gray-700">
+              <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+              <span class="font-semibold">Parque Nacional TdF</span><br>
+              <span class="text-sm text-gray-600 ml-6">Tour completo</span>
+            </li>
+            <li class="text-gray-700">
+              <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+              <span class="font-semibold">Lagos Fagnano y Escondido</span><br>
+              <span class="text-sm text-gray-600 ml-6">Día completo</span>
+            </li>
+            <li class="text-gray-700">
+              <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+              <span class="font-semibold">Traslados personalizados</span><br>
+              <span class="text-sm text-gray-600 ml-6">Por hora o por día</span>
+            </li>
+          </ul>
+
+          <p class="text-sm italic text-gray-600 mb-6">
+            Vehículos: 4x4 + Van turística
+          </p>
+
+          <div class="border-t-2 border-gray-200 my-4"></div>
+
+          <div class="grid grid-cols-2 gap-3 mb-6">
+            <a href="https://wa.me/5492901111111?text=Hola,%20soy%20hu%C3%A9sped%20de%20PompinHouse..."
+               target="_blank"
+               class="bg-[#25D366] hover:bg-[#25D366]/90 text-white font-semibold px-4 py-3 rounded-lg transition-all duration-300 text-center">
+              <i class="fab fa-whatsapp mr-2"></i>WhatsApp
+            </a>
+            <a href="tel:+5492901111111"
+               class="bg-primary hover:bg-primary/90 text-white font-semibold px-4 py-3 rounded-lg transition-all duration-300 text-center">
+              <i class="fas fa-phone mr-2"></i>Llamar
+            </a>
+          </div>
+
+          <div class="bg-green-100 border-2 border-green-600 rounded-lg p-4 text-center">
+            <p class="font-bold text-green-800">
+              <i class="fas fa-tag mr-2"></i>10% OFF<br>
+              <span class="text-sm font-normal">mencionando PompinHouse</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Disclaimer -->
+      <div class="text-center text-sm text-gray-500 italic animate-on-scroll">
+        <i class="fas fa-info-circle mr-2"></i>
+        Nota: Servicios independientes recomendados. Precios orientativos actualizados a Diciembre 2024.
+        PompinHouse no cobra comisión.
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECCIÓN 6: TIPS LOCALES -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <section id="tips" class="py-16 md:py-20 bg-white">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <!-- Header -->
+      <div class="text-center mb-12 animate-on-scroll">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
+          <i class="fas fa-lightbulb mr-2"></i>Tips para tu estadía
+        </h2>
+      </div>
+
+      <!-- Acordeón -->
+      <div class="space-y-4">
+        <!-- Item 1: Clima -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden animate-on-scroll">
+          <button onclick="toggleAccordion('clima')"
+                  class="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-gray-50 transition-all duration-300">
+            <span class="font-bold text-lg">
+              <i class="fas fa-snowflake mr-3 text-blue-500"></i>
+              Clima y qué traer
+            </span>
+            <i class="fas fa-plus accordion-icon" id="icon-clima"></i>
+          </button>
+          <div id="content-clima" class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+            <div class="px-6 pb-6">
+              <div class="border-t-2 border-gray-200 my-4"></div>
+              <p class="font-semibold mb-3">
+                <i class="fas fa-temperature-low mr-2"></i>Temperatura actual: 5-12°C
+              </p>
+              <p class="text-gray-700 mb-4">
+                El clima en Ushuaia es variable incluso en verano. Vestite en capas y siempre llevá:
+              </p>
+              <ul class="space-y-2 text-gray-700">
+                <li><i class="fas fa-check text-secondary mr-2"></i>Campera impermeable</li>
+                <li><i class="fas fa-check text-secondary mr-2"></i>Polar o buzo térmico</li>
+                <li><i class="fas fa-check text-secondary mr-2"></i>Remera manga larga</li>
+                <li><i class="fas fa-check text-secondary mr-2"></i>Pantalón largo (no jeans)</li>
+                <li><i class="fas fa-check text-secondary mr-2"></i>Calzado impermeable</li>
+                <li><i class="fas fa-check text-secondary mr-2"></i>Gorro y guantes</li>
+                <li><i class="fas fa-check text-secondary mr-2"></i>Protector solar (sí, en serio!)</li>
+              </ul>
+              <p class="mt-4 text-gray-600">
+                <i class="fas fa-cloud-rain mr-2"></i>Lluvia posible todo el año
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2: Senderos -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden animate-on-scroll">
+          <button onclick="toggleAccordion('senderos-tips')"
+                  class="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-gray-50 transition-all duration-300">
+            <span class="font-bold text-lg">
+              <i class="fas fa-hiking mr-3 text-green-600"></i>
+              Consejos para senderos
+            </span>
+            <i class="fas fa-plus accordion-icon" id="icon-senderos-tips"></i>
+          </button>
+          <div id="content-senderos-tips" class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+            <div class="px-6 pb-6">
+              <div class="border-t-2 border-gray-200 my-4"></div>
+              <p class="font-semibold mb-2">
+                <i class="fas fa-clock mr-2"></i>Salí temprano (8-9 AM)
+              </p>
+              <p class="text-gray-700 mb-4">El viento aumenta por la tarde</p>
+
+              <p class="font-semibold mb-3">
+                <i class="fas fa-backpack mr-2"></i>Llevá siempre:
+              </p>
+              <ul class="space-y-2 text-gray-700 mb-4">
+                <li><i class="fas fa-check text-secondary mr-2"></i>Agua (1.5L mínimo)</li>
+                <li><i class="fas fa-check text-secondary mr-2"></i>Snacks energéticos</li>
+                <li><i class="fas fa-check text-secondary mr-2"></i>Botiquín básico</li>
+                <li><i class="fas fa-check text-secondary mr-2"></i>Celular cargado</li>
+                <li><i class="fas fa-check text-secondary mr-2"></i>Bolsa para basura</li>
+              </ul>
+
+              <p class="text-gray-700 mb-2">
+                <i class="fas fa-mobile-alt mr-2"></i>Descargá mapa offline
+              </p>
+              <p class="text-sm text-gray-600 mb-4">(Maps.me o similar)</p>
+
+              <p class="text-orange-600 font-semibold">
+                <i class="fas fa-exclamation-triangle mr-2"></i>Avisá a alguien tu ruta
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3: Dinero -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden animate-on-scroll">
+          <button onclick="toggleAccordion('dinero')"
+                  class="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-gray-50 transition-all duration-300">
+            <span class="font-bold text-lg">
+              <i class="fas fa-credit-card mr-3 text-accent"></i>
+              Dinero y pagos
+            </span>
+            <i class="fas fa-plus accordion-icon" id="icon-dinero"></i>
+          </button>
+          <div id="content-dinero" class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+            <div class="px-6 pb-6">
+              <div class="border-t-2 border-gray-200 my-4"></div>
+              <p class="font-semibold mb-2">
+                <i class="fas fa-money-bill-wave mr-2"></i>Cajeros: Av. San Martín
+              </p>
+              <p class="text-gray-600 mb-4">(zona centro)</p>
+
+              <p class="font-semibold mb-2">
+                <i class="fas fa-credit-card mr-2"></i>La mayoría acepta tarjeta
+              </p>
+              <p class="text-gray-600 mb-4">Visa/Mastercard común</p>
+
+              <p class="font-semibold mb-3">
+                <i class="fas fa-dollar-sign mr-2"></i>Efectivo recomendado para:
+              </p>
+              <ul class="space-y-2 text-gray-700 mb-4">
+                <li>• Propinas (10%)</li>
+                <li>• Puestos callejeros</li>
+                <li>• Algunos remises</li>
+              </ul>
+
+              <p class="text-gray-700">
+                <i class="fas fa-exchange-alt mr-2"></i>Cambio: casas de cambio en San Martín
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4: Emergencias -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden animate-on-scroll">
+          <button onclick="toggleAccordion('emergencias')"
+                  class="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-gray-50 transition-all duration-300">
+            <span class="font-bold text-lg">
+              <i class="fas fa-ambulance mr-3 text-red-600"></i>
+              Contactos de emergencia
+            </span>
+            <i class="fas fa-plus accordion-icon" id="icon-emergencias"></i>
+          </button>
+          <div id="content-emergencias" class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
+            <div class="px-6 pb-6">
+              <div class="border-t-2 border-gray-200 my-4"></div>
+              <div class="space-y-3 text-gray-700 mb-4">
+                <p><i class="fas fa-phone-alt mr-2"></i><strong>Emergencias general:</strong> 911</p>
+                <p><i class="fas fa-hospital mr-2"></i><strong>Hospital:</strong> (02901) 442-900</p>
+                <p><i class="fas fa-shield-alt mr-2"></i><strong>Policía:</strong> 101</p>
+                <p><i class="fas fa-fire-extinguisher mr-2"></i><strong>Bomberos:</strong> 100</p>
+              </div>
+
+              <div class="border-t-2 border-gray-200 my-4"></div>
+
+              <p class="font-semibold mb-2">
+                <i class="fas fa-home mr-2"></i>Pablo (PompinHouse):
+              </p>
+              <p class="text-gray-700 mb-3">+54 2901 502672</p>
+              <a href="https://wa.me/5492901502672?text=Hola%20Pablo,%20necesito%20ayuda%20urgente"
+                 target="_blank"
+                 class="inline-block bg-[#25D366] hover:bg-[#25D366]/90 text-white font-semibold px-4 py-2 rounded-lg transition-all duration-300">
+                <i class="fab fa-whatsapp mr-2"></i>WhatsApp
+              </a>
+
+              <div class="border-t-2 border-gray-200 my-4"></div>
+
+              <p class="text-gray-600">
+                <i class="fas fa-taxi mr-2"></i>Remis recomendado: Ver sección Servicios ↑
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SECCIÓN 7: FOOTER -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <footer class="bg-[#2C3E50] text-white py-12">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <div class="text-center mb-8">
+        <h3 class="text-3xl font-bold mb-2">
+          <i class="fas fa-home mr-2"></i>PompinHouse
+        </h3>
+        <p class="text-white/80">Tu refugio en el Fin del Mundo</p>
+      </div>
+
+      <div class="border-t border-white/20 my-8"></div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <!-- Contacto -->
+        <div>
+          <h4 class="font-bold text-lg mb-4">
+            <i class="fas fa-phone mr-2"></i>Contacto
+          </h4>
+          <div class="space-y-2 text-white/90">
+            <p>WhatsApp: +54 2901 502672</p>
+            <p>Email: pablomartin.gatica@gmail.com</p>
+          </div>
+        </div>
+
+        <!-- Dirección -->
+        <div>
+          <h4 class="font-bold text-lg mb-4">
+            <i class="fas fa-map-marker-alt mr-2"></i>Dirección
+          </h4>
+          <div class="text-white/90">
+            <p>Gobernador Cornejo 325</p>
+            <p>Ushuaia, Tierra del Fuego</p>
+            <p>Argentina</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-white/20 my-8"></div>
+
+      <!-- CTA WhatsApp -->
+      <div class="text-center mb-8">
+        <p class="mb-4 text-lg">¿Alguna duda? Escribime</p>
+        <a href="https://wa.me/5492901502672?text=Hola%20Pablo,%20soy%20hu%C3%A9sped%20de%20PompinHouse,%20necesito%20ayuda"
+           target="_blank"
+           class="inline-block bg-[#25D366] hover:bg-[#25D366]/90 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300">
+          <i class="fab fa-whatsapp mr-2 text-xl"></i>Abrir WhatsApp
+        </a>
+      </div>
+
+      <div class="border-t border-white/20 my-8"></div>
+
+      <!-- Copyright -->
+      <div class="text-center text-white/70 text-sm">
+        <p>&copy; 2024 PompinHouse</p>
+        <p class="mt-1">Hecho con ❤️ en Ushuaia</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- WHATSAPP FLOATING BUTTON -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <a href="https://wa.me/5492901502672?text=Hola%20Pablo,%20soy%20hu%C3%A9sped%20de%20PompinHouse,%20necesito%20ayuda"
+     target="_blank"
+     id="whatsapp-float"
+     class="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-[9999] bg-[#25D366] hover:bg-[#25D366]/90 w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 animate-pulse-slow"
+     aria-label="Contactar por WhatsApp">
+    <i class="fab fa-whatsapp text-white text-3xl"></i>
+  </a>
+
+  <!-- Toast notification -->
+  <div id="toast" class="fixed top-4 right-4 bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg transform translate-x-[200%] transition-transform duration-300 z-[10000]">
+    <i class="fas fa-check-circle mr-2"></i>
+    <span id="toast-message">Contraseña copiada!</span>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
