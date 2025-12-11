@@ -16,17 +16,17 @@
   <meta property="og:url" content="https://pompinhouse.com/">
   <meta property="og:title" content="PompinHouse - Tu refugio en Ushuaia">
   <meta property="og:description" content="Alojamiento acogedor en el Fin del Mundo. WiFi, calefacción, guía turística incluida.">
-  <meta property="og:image" content="https://pompinhouse.com/assets/images/og-image.jpg">
+  <meta property="og:image" content="https://pompinhouse.com/assets/images/logo.jpg">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://pompinhouse.com/">
   <meta property="twitter:title" content="PompinHouse - Tu refugio en Ushuaia">
   <meta property="twitter:description" content="Alojamiento acogedor en el Fin del Mundo.">
-  <meta property="twitter:image" content="https://pompinhouse.com/assets/images/og-image.jpg">
+  <meta property="twitter:image" content="https://pompinhouse.com/assets/images/logo.jpg">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon.png">
+  <link rel="icon" type="image/jpeg" href="assets/images/logo.jpg">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -58,8 +58,8 @@
 
   <!-- Loading Spinner -->
   <div id="loading-spinner" class="fixed inset-0 bg-white z-[10000] flex flex-col items-center justify-center">
-    <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-primary"></div>
-    <p class="mt-4 text-xl font-semibold text-primary">PompinHouse</p>
+    <img src="assets/images/logo.jpg" alt="PompinHouse Logo" class="w-32 h-32 md:w-40 md:h-40 rounded-full animate-pulse object-cover">
+    <p class="mt-4 text-xl font-semibold text-primary">Cargando...</p>
   </div>
 
   <!-- ═══════════════════════════════════════════════════════════════ -->
@@ -69,13 +69,13 @@
     <!-- Background con overlay -->
     <div class="absolute inset-0 bg-gradient-to-b from-black/50 to-black/50 z-0"></div>
     <div class="absolute inset-0 bg-cover bg-center z-[-1]"
-         style="background-image: url('https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=2070'); background-attachment: fixed;">
+         style="background-image: url('assets/images/hero.jpg'); background-attachment: fixed;">
     </div>
 
     <!-- Contenido -->
     <div class="relative z-10 text-center px-4 animate-fade-in">
-      <div class="text-6xl md:text-8xl mb-6 animate-bounce-slow">
-        <i class="fas fa-home text-white"></i>
+      <div class="mb-6 animate-bounce-slow">
+        <img src="assets/images/logo.jpg" alt="PompinHouse" class="w-24 h-24 md:w-32 md:h-32 mx-auto rounded-full shadow-2xl border-4 border-white object-cover">
       </div>
       <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 animate-slide-up">
         Bienvenido a PompinHouse
@@ -117,7 +117,7 @@
           height="450"
           style="border:0; border-radius:16px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"
           loading="lazy"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2396.9!2d-68.305!3d-54.807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTTCsDQ4JzI1LjIiUyA2OMKwMTgnMTguMCJX!5e0!3m2!1ses!2sar!4v1234567890!5m2!1ses!2sar"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2396.887543426786!2d-68.30749788843684!3d-54.807119973132496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbc4c22eefef17f53%3A0x1c8c64c0e7e3e0b4!2sGobernador%20Cornejo%20325%2C%20V9410%20Ushuaia%2C%20Tierra%20del%20Fuego!5e0!3m2!1ses-419!2sar!4v1733946000000!5m2!1ses-419!2sar"
           allowfullscreen>
         </iframe>
       </div>
@@ -203,7 +203,7 @@
 
       <!-- Botón Google Maps -->
       <div class="text-center animate-on-scroll">
-        <a href="https://goo.gl/maps/your-short-link"
+        <a href="https://maps.app.goo.gl/j19jXhmTVFdRv2Lk6"
            target="_blank"
            class="inline-block bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 w-full md:w-auto">
           <i class="fas fa-mobile-alt mr-2"></i>Abrir en Google Maps
@@ -392,7 +392,7 @@
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Sendero 1: Laguna Esmeralda -->
             <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-              <div class="h-48 bg-gradient-to-br from-green-400 to-blue-500"></div>
+              <div class="h-48 bg-cover bg-center" style="background-image: url('assets/images/lagunaesmeralda.jpg');"></div>
               <div class="p-6">
                 <h3 class="text-xl font-bold mb-3 flex items-center">
                   <i class="fas fa-hiking mr-2 text-green-600"></i>
@@ -414,7 +414,7 @@
 
             <!-- Sendero 2: Glaciar Martial -->
             <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-              <div class="h-48 bg-gradient-to-br from-blue-300 to-blue-600"></div>
+              <div class="h-48 bg-cover bg-center" style="background-image: url('assets/images/camino lemartial (1).jpg');"></div>
               <div class="p-6">
                 <h3 class="text-xl font-bold mb-3 flex items-center">
                   <i class="fas fa-hiking mr-2 text-green-600"></i>
@@ -458,7 +458,7 @@
 
             <!-- Sendero 4: Parque Nacional -->
             <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-              <div class="h-48 bg-gradient-to-br from-green-600 to-green-800"></div>
+              <div class="h-48 bg-cover bg-center" style="background-image: url('assets/images/parque.jpg');"></div>
               <div class="p-6">
                 <h3 class="text-xl font-bold mb-3 flex items-center">
                   <i class="fas fa-tree mr-2 text-green-600"></i>
@@ -472,6 +472,50 @@
                   <p><i class="fas fa-map-marker-alt mr-2"></i>12 km desde PompinHouse</p>
                 </div>
                 <p class="text-gray-700 mb-4">El único parque nacional con costa marítima de Argentina. Imperdible.</p>
+                <a href="#" class="text-primary hover:text-primary/80 font-semibold">
+                  Ver en mapa <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Atracción 5: Faro Les Eclaireurs -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+              <div class="h-48 bg-cover bg-center" style="background-image: url('assets/images/faro.jpg');"></div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-3 flex items-center">
+                  <i class="fas fa-ship mr-2 text-blue-600"></i>
+                  Faro Les Eclaireurs
+                </h3>
+                <div class="space-y-2 text-sm text-gray-600 mb-4">
+                  <p><i class="fas fa-ruler mr-2"></i>Navegación en barco</p>
+                  <p><i class="far fa-clock mr-2"></i>2-3 horas</p>
+                  <p><i class="fas fa-chart-line mr-2"></i>Dificultad: Baja</p>
+                  <p><i class="fas fa-water mr-2"></i>Canal Beagle</p>
+                  <p><i class="fas fa-map-marker-alt mr-2"></i>Desde puerto Ushuaia</p>
+                </div>
+                <p class="text-gray-700 mb-4">Icónico faro del Canal Beagle. Navegación con lobos marinos y aves.</p>
+                <a href="#" class="text-primary hover:text-primary/80 font-semibold">
+                  Ver en mapa <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Atracción 6: Cabo San Pablo -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+              <div class="h-48 bg-cover bg-center" style="background-image: url('assets/images/cabosanpablo.jpg');"></div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-3 flex items-center">
+                  <i class="fas fa-anchor mr-2 text-orange-600"></i>
+                  Cabo San Pablo
+                </h3>
+                <div class="space-y-2 text-sm text-gray-600 mb-4">
+                  <p><i class="fas fa-ruler mr-2"></i>108 km desde Ushuaia</p>
+                  <p><i class="far fa-clock mr-2"></i>Día completo</p>
+                  <p><i class="fas fa-chart-line mr-2"></i>Dificultad: Baja</p>
+                  <p><i class="fas fa-car mr-2"></i>Requiere vehículo</p>
+                  <p><i class="fas fa-map-marker-alt mr-2"></i>Costa Atlántica TdF</p>
+                </div>
+                <p class="text-gray-700 mb-4">Barco Desdemona varado. Paisaje único en la costa atlántica fueguina.</p>
                 <a href="#" class="text-primary hover:text-primary/80 font-semibold">
                   Ver en mapa <i class="fas fa-arrow-right ml-1"></i>
                 </a>
@@ -597,7 +641,7 @@
         <div id="content-cultura" class="tab-content hidden">
           <div class="max-w-2xl mx-auto">
             <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-              <div class="h-64 bg-gradient-to-br from-yellow-400 to-orange-500"></div>
+              <div class="h-64 bg-cover bg-center" style="background-image: url('assets/images/presidio.jpg');"></div>
               <div class="p-8">
                 <h3 class="text-2xl font-bold mb-3 flex items-center">
                   <i class="fas fa-landmark mr-3 text-yellow-600"></i>
@@ -670,18 +714,19 @@
           <ul class="space-y-3 mb-6">
             <li class="text-gray-700">
               <i class="fas fa-check-circle text-green-600 mr-2"></i>
-              <span class="font-semibold">Laguna Esmeralda</span> (guiado)<br>
-              <span class="text-sm text-gray-600 ml-6">Desde $25.000/persona</span>
+              <span class="font-semibold">Laguna Esmeralda</span> (guiado)
             </li>
             <li class="text-gray-700">
               <i class="fas fa-check-circle text-green-600 mr-2"></i>
-              <span class="font-semibold">Glaciar Vinciguerra</span><br>
-              <span class="text-sm text-gray-600 ml-6">Desde $35.000/persona</span>
+              <span class="font-semibold">Glaciar Vinciguerra</span>
             </li>
             <li class="text-gray-700">
               <i class="fas fa-check-circle text-green-600 mr-2"></i>
-              <span class="font-semibold">Trekking personalizado</span><br>
-              <span class="text-sm text-gray-600 ml-6">Consultar</span>
+              <span class="font-semibold">Trekking personalizado</span>
+            </li>
+            <li class="text-gray-700">
+              <i class="fas fa-check-circle text-green-600 mr-2"></i>
+              <span class="font-semibold">Consultar precios</span>
             </li>
           </ul>
 
@@ -692,14 +737,22 @@
           <div class="border-t-2 border-gray-200 my-4"></div>
 
           <div class="grid grid-cols-2 gap-3 mb-6">
-            <a href="https://wa.me/5492901555555?text=Hola%20Marcos,%20soy%20hu%C3%A9sped%20de%20PompinHouse..."
+            <a href="https://wa.me/5492901401423?text=Hola%20Marcos,%20soy%20hu%C3%A9sped%20de%20PompinHouse..."
                target="_blank"
                class="bg-[#25D366] hover:bg-[#25D366]/90 text-white font-semibold px-4 py-3 rounded-lg transition-all duration-300 text-center">
               <i class="fab fa-whatsapp mr-2"></i>WhatsApp
             </a>
-            <a href="tel:+5492901555555"
+            <a href="tel:+5492901401423"
                class="bg-primary hover:bg-primary/90 text-white font-semibold px-4 py-3 rounded-lg transition-all duration-300 text-center">
               <i class="fas fa-phone mr-2"></i>Llamar
+            </a>
+          </div>
+
+          <div class="mb-6">
+            <a href="https://www.instagram.com/marcos.vargas_ushuaia"
+               target="_blank"
+               class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-4 py-3 rounded-lg transition-all duration-300 text-center w-full block">
+              <i class="fab fa-instagram mr-2"></i>Instagram: @marcos.vargas_ushuaia
             </a>
           </div>
 
@@ -729,23 +782,23 @@
           <ul class="space-y-3 mb-6">
             <li class="text-gray-700">
               <i class="fas fa-check-circle text-blue-600 mr-2"></i>
-              <span class="font-semibold">Aeropuerto ↔ PompinHouse</span><br>
-              <span class="text-sm text-gray-600 ml-6">Consultar</span>
+              <span class="font-semibold">Aeropuerto ↔ PompinHouse</span>
             </li>
             <li class="text-gray-700">
               <i class="fas fa-check-circle text-blue-600 mr-2"></i>
-              <span class="font-semibold">Parque Nacional TdF</span><br>
-              <span class="text-sm text-gray-600 ml-6">Tour completo</span>
+              <span class="font-semibold">Parque Nacional TdF</span>
             </li>
             <li class="text-gray-700">
               <i class="fas fa-check-circle text-blue-600 mr-2"></i>
-              <span class="font-semibold">Lagos Fagnano y Escondido</span><br>
-              <span class="text-sm text-gray-600 ml-6">Día completo</span>
+              <span class="font-semibold">Lagos Fagnano y Escondido</span>
             </li>
             <li class="text-gray-700">
               <i class="fas fa-check-circle text-blue-600 mr-2"></i>
-              <span class="font-semibold">Traslados personalizados</span><br>
-              <span class="text-sm text-gray-600 ml-6">Por hora o por día</span>
+              <span class="font-semibold">Traslados personalizados</span>
+            </li>
+            <li class="text-gray-700">
+              <i class="fas fa-info-circle text-blue-600 mr-2"></i>
+              <span class="font-semibold">Consultar precios y disponibilidad</span>
             </li>
           </ul>
 
@@ -764,6 +817,19 @@
             <a href="tel:+5492901111111"
                class="bg-primary hover:bg-primary/90 text-white font-semibold px-4 py-3 rounded-lg transition-all duration-300 text-center">
               <i class="fas fa-phone mr-2"></i>Llamar
+            </a>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3 mb-6">
+            <a href="https://aquamarine-mandrill-910278.hostingersite.com"
+               target="_blank"
+               class="bg-blue-700 hover:bg-blue-800 text-white font-semibold px-4 py-3 rounded-lg transition-all duration-300 text-center">
+              <i class="fas fa-globe mr-2"></i>Web
+            </a>
+            <a href="https://www.instagram.com/xalpen_traslados"
+               target="_blank"
+               class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-4 py-3 rounded-lg transition-all duration-300 text-center">
+              <i class="fab fa-instagram mr-2"></i>Instagram
             </a>
           </div>
 
@@ -964,8 +1030,9 @@
   <footer class="bg-[#2C3E50] text-white py-12">
     <div class="container mx-auto px-4 max-w-4xl">
       <div class="text-center mb-8">
+        <img src="assets/images/logo.jpg" alt="PompinHouse" class="w-24 h-24 mx-auto rounded-full mb-4 shadow-lg object-cover">
         <h3 class="text-3xl font-bold mb-2">
-          <i class="fas fa-home mr-2"></i>PompinHouse
+          PompinHouse
         </h3>
         <p class="text-white/80">Tu refugio en el Fin del Mundo</p>
       </div>
