@@ -1,0 +1,74 @@
+/* Header Sticky */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9998;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.site-header.scrolled {
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Espacio para compensar el header fijo */
+.header-spacer {
+    height: 70px;
+}
+
+/* Mobile Menu Transition */
+.mobile-menu {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transform-origin: top;
+    transform: scaleY(0);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.mobile-menu.open {
+    transform: scaleY(1);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Language Selector Styles */
+.lang-btn {
+    transition: all 0.2s ease;
+    cursor: pointer;
+    font-size: 1.5rem;
+    line-height: 1;
+    border-radius: 50%;
+    margin: 0 4px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ajustes para anchors por el header fijo */
+section {
+    scroll-margin-top: 90px;
+}
+
+/* Hamburguer button animation */
+.hamburger svg {
+    transition: transform 0.3s ease;
+}
+.hamburger.open svg {
+    transform: rotate(90deg);
+}

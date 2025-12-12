@@ -4,20 +4,50 @@
    ═══════════════════════════════════════════════════════════════ */
 
 // ═══════════════════════════════════════════════════════════════
-// LOADING SPINNER
+// HEADER & MOBILE MENU
 // ═══════════════════════════════════════════════════════════════
+
+function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    const btn = document.getElementById('mobile-menu-btn');
+    
+    if (menu.classList.contains('open')) {
+        menu.classList.remove('open');
+        btn.classList.remove('open');
+        btn.innerHTML = '<i class="fas fa-bars"></i>';
+    } else {
+        menu.classList.add('open');
+        btn.classList.add('open');
+        btn.innerHTML = '<i class="fas fa-times"></i>';
+    }
+}
+
+// Close menu when clicking outside
+document.addEventListener('click', function(e) {
+    const menu = document.getElementById('mobile-menu');
+    const btn = document.getElementById('mobile-menu-btn');
+    
+    if (menu && menu.classList.contains('open')) {
+        if (!menu.contains(e.target) && !btn.contains(e.target)) {
+            toggleMobileMenu();
+        }
+    }
+});
+
+// Sticky Header effect
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('.site-header');
+    if (header) {
+        if (window.scrollY > 10) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    }
+});
 
 window.addEventListener('load', function() {
   console.log('✅ Página cargada completamente');
-
-  // Ocultar spinner después de 1 segundo
-  setTimeout(() => {
-    const spinner = document.getElementById('loading-spinner');
-    if (spinner) {
-      spinner.classList.add('hidden');
-      console.log('✅ Spinner ocultado');
-    }
-  }, 1000);
 });
 
 // ═══════════════════════════════════════════════════════════════

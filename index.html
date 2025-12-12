@@ -53,14 +53,74 @@
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/header.css">
 </head>
 <body class="font-['Inter',sans-serif]">
 
-  <!-- Loading Spinner -->
-  <div id="loading-spinner" class="fixed inset-0 bg-white z-[10000] flex flex-col items-center justify-center">
-    <img src="assets/images/logo.jpg" alt="PompinHouse Logo" class="w-32 h-32 md:w-40 md:h-40 rounded-full animate-pulse" style="object-fit: contain; padding: 4px; background: white; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);">
-    <p class="mt-4 text-xl font-semibold text-primary">Cargando...</p>
-  </div>
+  <!-- HEADER STICKY MOBILE-FIRST -->
+  <header class="site-header">
+    <div class="container mx-auto px-4 flex justify-between items-center h-full">
+      <!-- Logo -->
+      <a href="#" class="flex items-center group">
+          <img src="assets/images/logo.jpg" alt="PompinHouse" class="w-10 h-10 rounded-full mr-2 transition-transform group-hover:scale-110">
+          <span class="font-bold text-lg text-primary">PompinHouse</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center space-x-6">
+         <a href="#ubicacion" class="font-medium text-gray-700 hover:text-primary transition-colors" data-i18n="nav.location">Ubicación</a>
+         <a href="#info-estadia" class="font-medium text-gray-700 hover:text-primary transition-colors" data-i18n="nav.house">La Casa</a>
+         <a href="#que-hacer" class="font-medium text-gray-700 hover:text-primary transition-colors" data-i18n="nav.thingsToDo">Qué Hacer</a>
+         <a href="#tips" class="font-medium text-gray-700 hover:text-primary transition-colors" data-i18n="nav.contact">Contacto</a>
+         
+         <!-- Language Selector Desktop -->
+         <div class="flex items-center ml-4 border-l pl-4 border-gray-300 space-x-2">
+           <button onclick="setLanguage('es')" class="lang-btn opacity-60 hover:opacity-100 transition-opacity" data-lang="es" title="Español">
+             <img src="https://flagcdn.com/w40/ar.png" alt="Argentina" class="w-6 h-auto rounded-sm shadow-sm">
+           </button>
+           <button onclick="setLanguage('en')" class="lang-btn opacity-60 hover:opacity-100 transition-opacity" data-lang="en" title="English">
+             <img src="https://flagcdn.com/w40/us.png" alt="USA" class="w-6 h-auto rounded-sm shadow-sm">
+           </button>
+           <button onclick="setLanguage('fr')" class="lang-btn opacity-60 hover:opacity-100 transition-opacity" data-lang="fr" title="Français">
+             <img src="https://flagcdn.com/w40/fr.png" alt="France" class="w-6 h-auto rounded-sm shadow-sm">
+           </button>
+           <button onclick="setLanguage('pt')" class="lang-btn opacity-60 hover:opacity-100 transition-opacity" data-lang="pt" title="Português">
+             <img src="https://flagcdn.com/w40/br.png" alt="Brasil" class="w-6 h-auto rounded-sm shadow-sm">
+           </button>
+         </div>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden text-2xl text-primary hamburger focus:outline-none" onclick="toggleMobileMenu()">
+         <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobile-menu" class="mobile-menu md:hidden flex flex-col p-4 space-y-4 border-t border-gray-100">
+         <a href="#ubicacion" class="block font-medium text-gray-700 hover:text-primary py-2 px-4 rounded hover:bg-gray-50" data-i18n="nav.location" onclick="toggleMobileMenu()">Ubicación</a>
+         <a href="#info-estadia" class="block font-medium text-gray-700 hover:text-primary py-2 px-4 rounded hover:bg-gray-50" data-i18n="nav.house" onclick="toggleMobileMenu()">La Casa</a>
+         <a href="#que-hacer" class="block font-medium text-gray-700 hover:text-primary py-2 px-4 rounded hover:bg-gray-50" data-i18n="nav.thingsToDo" onclick="toggleMobileMenu()">Qué Hacer</a>
+         <a href="#tips" class="block font-medium text-gray-700 hover:text-primary py-2 px-4 rounded hover:bg-gray-50" data-i18n="nav.contact" onclick="toggleMobileMenu()">Contacto</a>
+         
+         <!-- Language Selector Mobile -->
+         <div class="flex items-center justify-center space-x-6 pt-4 border-t border-gray-100">
+           <button onclick="setLanguage('es')" class="lang-btn transform hover:scale-110 transition-transform" data-lang="es">
+             <img src="https://flagcdn.com/w40/ar.png" alt="Argentina" class="w-8 h-auto rounded-sm shadow-sm">
+           </button>
+           <button onclick="setLanguage('en')" class="lang-btn transform hover:scale-110 transition-transform" data-lang="en">
+             <img src="https://flagcdn.com/w40/us.png" alt="USA" class="w-8 h-auto rounded-sm shadow-sm">
+           </button>
+           <button onclick="setLanguage('fr')" class="lang-btn transform hover:scale-110 transition-transform" data-lang="fr">
+             <img src="https://flagcdn.com/w40/fr.png" alt="France" class="w-8 h-auto rounded-sm shadow-sm">
+           </button>
+           <button onclick="setLanguage('pt')" class="lang-btn transform hover:scale-110 transition-transform" data-lang="pt">
+             <img src="https://flagcdn.com/w40/br.png" alt="Brasil" class="w-8 h-auto rounded-sm shadow-sm">
+           </button>
+         </div>
+    </div>
+  </header>
+  <div class="header-spacer"></div>
 
   <!-- ═══════════════════════════════════════════════════════════════ -->
   <!-- SECCIÓN 1: HERO -->
@@ -77,14 +137,14 @@
       <div class="mb-6 animate-bounce-slow">
         <img src="assets/images/logo.jpg" alt="PompinHouse" class="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full shadow-2xl border-4 border-white" style="object-fit: contain; padding: 4px; background: white;">
       </div>
-      <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 animate-slide-up">
+      <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 animate-slide-up" data-i18n="hero.welcome">
         Bienvenido a PompinHouse
       </h1>
-      <p class="text-xl md:text-3xl text-white/80 font-light mb-8 animate-slide-up-delay">
+      <p class="text-xl md:text-3xl text-white/80 font-light mb-8 animate-slide-up-delay" data-i18n="hero.tagline">
         Tu refugio en el Fin del Mundo
       </p>
       <a href="#ubicacion" class="inline-block bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-xl animate-pulse-slow">
-        <i class="fas fa-map-marker-alt mr-2"></i>Ver ubicación
+        <i class="fas fa-map-marker-alt mr-2"></i><span data-i18n="hero.cta">Ver ubicación</span>
       </a>
 
       <!-- Scroll indicator -->
@@ -102,9 +162,9 @@
       <!-- Header -->
       <div class="text-center mb-12 animate-on-scroll">
         <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
-          <i class="fas fa-map-marker-alt mr-2"></i>¿Dónde estamos?
+          <i class="fas fa-map-marker-alt mr-2"></i><span data-i18n="location.title">¿Dónde estamos?</span>
         </h2>
-        <p class="text-lg md:text-xl text-gray-600">
+        <p class="text-lg md:text-xl text-gray-600" data-i18n="location.address">
           Gobernador Cornero 325<br>
           Ushuaia, Tierra del Fuego
         </p>
@@ -130,17 +190,17 @@
           <div class="text-4xl mb-4 text-primary">
             <i class="fas fa-city"></i>
           </div>
-          <h3 class="font-bold text-lg mb-2">Centro Ushuaia</h3>
+          <h3 class="font-bold text-lg mb-2" data-i18n="location.cards.center">Centro Ushuaia</h3>
           <div class="border-t-2 border-gray-200 my-3"></div>
-          <p class="text-3xl font-bold text-primary mb-2">10 minutos</p>
+          <p class="text-3xl font-bold text-primary mb-2">10 <span class="text-xl" data-i18n="location.cards.minutes">minutos</span></p>
           <div class="border-t-2 border-gray-200 my-3"></div>
           <p class="text-sm text-gray-600 mb-4">
-            <i class="fas fa-walking mr-1"></i>Caminando
+            <i class="fas fa-walking mr-1"></i><span data-i18n="location.cards.walking">Caminando</span>
           </p>
           <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornero+325,Ushuaia&destination=Centro+Ushuaia&travelmode=walking"
              target="_blank"
              class="text-primary hover:text-primary/80 font-semibold text-sm">
-            Ver ruta <i class="fas fa-arrow-right ml-1"></i>
+            <span data-i18n="location.cards.viewRoute">Ver ruta</span> <i class="fas fa-arrow-right ml-1"></i>
           </a>
         </div>
 
@@ -149,17 +209,17 @@
           <div class="text-4xl mb-4 text-primary">
             <i class="fas fa-plane"></i>
           </div>
-          <h3 class="font-bold text-lg mb-2">Aeropuerto</h3>
+          <h3 class="font-bold text-lg mb-2" data-i18n="location.cards.airport">Aeropuerto</h3>
           <div class="border-t-2 border-gray-200 my-3"></div>
-          <p class="text-3xl font-bold text-primary mb-2">15 minutos</p>
+          <p class="text-3xl font-bold text-primary mb-2">15 <span class="text-xl" data-i18n="location.cards.minutes">minutos</span></p>
           <div class="border-t-2 border-gray-200 my-3"></div>
           <p class="text-sm text-gray-600 mb-4">
-            <i class="fas fa-car mr-1"></i>En auto
+            <i class="fas fa-car mr-1"></i><span data-i18n="location.cards.driving">En auto</span>
           </p>
           <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornero+325,Ushuaia&destination=Aeropuerto+Internacional+Ushuaia&travelmode=driving"
              target="_blank"
              class="text-primary hover:text-primary/80 font-semibold text-sm">
-            Ver ruta <i class="fas fa-arrow-right ml-1"></i>
+            <span data-i18n="location.cards.viewRoute">Ver ruta</span> <i class="fas fa-arrow-right ml-1"></i>
           </a>
         </div>
 
@@ -168,17 +228,17 @@
           <div class="text-4xl mb-4 text-primary">
             <i class="fas fa-landmark"></i>
           </div>
-          <h3 class="font-bold text-lg mb-2">Presidio</h3>
+          <h3 class="font-bold text-lg mb-2" data-i18n="location.cards.museum">Presidio</h3>
           <div class="border-t-2 border-gray-200 my-3"></div>
-          <p class="text-3xl font-bold text-primary mb-2">12 minutos</p>
+          <p class="text-3xl font-bold text-primary mb-2">12 <span class="text-xl" data-i18n="location.cards.minutes">minutos</span></p>
           <div class="border-t-2 border-gray-200 my-3"></div>
           <p class="text-sm text-gray-600 mb-4">
-            <i class="fas fa-walking mr-1"></i>Caminando
+            <i class="fas fa-walking mr-1"></i><span data-i18n="location.cards.walking">Caminando</span>
           </p>
           <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornero+325,Ushuaia&destination=Museo+Maritimo+Presidio+Ushuaia&travelmode=walking"
              target="_blank"
              class="text-primary hover:text-primary/80 font-semibold text-sm">
-            Ver ruta <i class="fas fa-arrow-right ml-1"></i>
+            <span data-i18n="location.cards.viewRoute">Ver ruta</span> <i class="fas fa-arrow-right ml-1"></i>
           </a>
         </div>
 
@@ -187,17 +247,17 @@
           <div class="text-4xl mb-4 text-primary">
             <i class="fas fa-shopping-cart"></i>
           </div>
-          <h3 class="font-bold text-lg mb-2">Supermercado</h3>
+          <h3 class="font-bold text-lg mb-2" data-i18n="location.cards.supermarket">Supermercado</h3>
           <div class="border-t-2 border-gray-200 my-3"></div>
-          <p class="text-3xl font-bold text-primary mb-2">3 minutos</p>
+          <p class="text-3xl font-bold text-primary mb-2">3 <span class="text-xl" data-i18n="location.cards.minutes">minutos</span></p>
           <div class="border-t-2 border-gray-200 my-3"></div>
           <p class="text-sm text-gray-600 mb-4">
-            <i class="fas fa-walking mr-1"></i>Caminando
+            <i class="fas fa-walking mr-1"></i><span data-i18n="location.cards.walking">Caminando</span>
           </p>
           <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornero+325,Ushuaia&destination=La+Anonima+Supermercado+Ushuaia&travelmode=walking"
              target="_blank"
              class="text-primary hover:text-primary/80 font-semibold text-sm">
-            Ver ruta <i class="fas fa-arrow-right ml-1"></i>
+            <span data-i18n="location.cards.viewRoute">Ver ruta</span> <i class="fas fa-arrow-right ml-1"></i>
           </a>
         </div>
       </div>
@@ -207,7 +267,7 @@
         <a href="https://maps.app.goo.gl/j19jXhmTVFdRv2Lk6"
            target="_blank"
            class="inline-block bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 w-full md:w-auto">
-          <i class="fas fa-mobile-alt mr-2"></i>Abrir en Google Maps
+          <i class="fas fa-mobile-alt mr-2"></i><span data-i18n="location.openMaps">Abrir en Google Maps</span>
         </a>
       </div>
     </div>
@@ -221,7 +281,7 @@
       <!-- Header -->
       <div class="text-center mb-12 animate-on-scroll">
         <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
-          <i class="fas fa-key mr-2"></i>Información de tu estadía
+          <i class="fas fa-key mr-2"></i><span data-i18n="stayInfo.title">Información de tu estadía</span>
         </h2>
       </div>
 
@@ -234,12 +294,12 @@
           </div>
           <div class="space-y-4">
             <div>
-              <h3 class="font-bold text-lg mb-1">Check-in</h3>
+              <h3 class="font-bold text-lg mb-1" data-i18n="stayInfo.checkin">Check-in</h3>
               <p class="text-2xl font-semibold text-gray-700">16:00 hs</p>
             </div>
             <div class="border-t-2 border-gray-200"></div>
             <div>
-              <h3 class="font-bold text-lg mb-1">Check-out</h3>
+              <h3 class="font-bold text-lg mb-1" data-i18n="stayInfo.checkout">Check-out</h3>
               <p class="text-2xl font-semibold text-gray-700">12:00 hs</p>
             </div>
           </div>
@@ -250,19 +310,19 @@
           <div class="text-4xl mb-4 text-primary">
             <i class="fas fa-wifi"></i>
           </div>
-          <h3 class="font-bold text-lg mb-4">WiFi</h3>
+          <h3 class="font-bold text-lg mb-4" data-i18n="stayInfo.wifi.title">WiFi</h3>
           <div class="space-y-3">
             <div>
-              <p class="text-sm text-gray-600">Red:</p>
+              <p class="text-sm text-gray-600" data-i18n="stayInfo.wifi.network">Red:</p>
               <p class="font-semibold text-gray-800">Remolcoy</p>
             </div>
             <div>
-              <p class="text-sm text-gray-600">Contraseña:</p>
+              <p class="text-sm text-gray-600" data-i18n="stayInfo.wifi.password">Contraseña:</p>
               <p class="font-semibold text-gray-800" id="wifi-password">14973064</p>
             </div>
             <button onclick="copyWifiPassword()"
                     class="bg-secondary hover:bg-secondary/90 text-white font-semibold px-6 py-2 rounded-lg transition-all duration-300 w-full">
-              <i class="fas fa-copy mr-2"></i>Copiar contraseña
+              <i class="fas fa-copy mr-2"></i><span data-i18n="stayInfo.wifi.copy">Copiar contraseña</span>
             </button>
           </div>
         </div>
@@ -272,17 +332,17 @@
           <div class="text-4xl mb-4 text-primary">
             <i class="fas fa-phone"></i>
           </div>
-          <h3 class="font-bold text-lg mb-4">Contacto</h3>
-          <p class="text-gray-700 mb-6">Pablo</p>
+          <h3 class="font-bold text-lg mb-4" data-i18n="stayInfo.contact.title">Contacto</h3>
+          <p class="text-gray-700 mb-6" data-i18n="stayInfo.contact.name">Pablo</p>
           <div class="space-y-3">
             <a href="https://wa.me/5492901502672?text=Hola%20Pablo,%20soy%20hu%C3%A9sped%20de%20PompinHouse..."
                target="_blank"
                class="block bg-[#25D366] hover:bg-[#25D366]/90 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 text-center">
-              <i class="fab fa-whatsapp mr-2"></i>WhatsApp
+              <i class="fab fa-whatsapp mr-2"></i><span data-i18n="stayInfo.contact.whatsapp">WhatsApp</span>
             </a>
             <a href="tel:+5492901502672"
                class="block bg-primary hover:bg-primary/90 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 text-center">
-              <i class="fas fa-phone mr-2"></i>Llamar
+              <i class="fas fa-phone mr-2"></i><span data-i18n="stayInfo.contact.call">Llamar</span>
             </a>
           </div>
         </div>
@@ -292,23 +352,23 @@
           <div class="text-4xl mb-4 text-primary">
             <i class="fas fa-home"></i>
           </div>
-          <h3 class="font-bold text-lg mb-4">Servicios</h3>
+          <h3 class="font-bold text-lg mb-4" data-i18n="stayInfo.services.title">Servicios</h3>
           <ul class="space-y-3">
             <li class="flex items-center text-gray-700">
               <i class="fas fa-check-circle text-secondary mr-3"></i>
-              Calefacción
+              <span data-i18n="stayInfo.services.heating">Calefacción</span>
             </li>
             <li class="flex items-center text-gray-700">
               <i class="fas fa-check-circle text-secondary mr-3"></i>
-              Cocina equipada
+              <span data-i18n="stayInfo.services.kitchen">Cocina equipada</span>
             </li>
             <li class="flex items-center text-gray-700">
               <i class="fas fa-check-circle text-secondary mr-3"></i>
-              Ropa de cama
+              <span data-i18n="stayInfo.services.bedding">Ropa de cama</span>
             </li>
             <li class="flex items-center text-gray-700">
               <i class="fas fa-check-circle text-secondary mr-3"></i>
-              WiFi alta velocidad
+              <span data-i18n="stayInfo.services.wifiHighSpeed">WiFi alta velocidad</span>
             </li>
           </ul>
         </div>
@@ -324,9 +384,9 @@
       <!-- Header -->
       <div class="text-center mb-12 animate-on-scroll">
         <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
-          <i class="fas fa-map-marked-alt mr-2"></i>Descubrí Ushuaia
+          <i class="fas fa-map-marked-alt mr-2"></i><span data-i18n="thingsToDo.title">Descubrí Ushuaia</span>
         </h2>
-        <p class="text-lg text-gray-600">Los mejores lugares a tu alcance</p>
+        <p class="text-lg text-gray-600" data-i18n="thingsToDo.subtitle">Los mejores lugares a tu alcance</p>
       </div>
 
       <!-- Tabs -->
@@ -336,17 +396,17 @@
           <button onclick="switchTab('senderos')"
                   id="tab-senderos"
                   class="tab-button active px-6 py-3 font-semibold transition-all duration-300">
-            <i class="fas fa-hiking mr-2"></i>Senderos
+            <i class="fas fa-hiking mr-2"></i><span data-i18n="thingsToDo.tabs.trails">Senderos</span>
           </button>
           <button onclick="switchTab('gastronomia')"
                   id="tab-gastronomia"
                   class="tab-button px-6 py-3 font-semibold transition-all duration-300">
-            <i class="fas fa-utensils mr-2"></i>Gastronomía
+            <i class="fas fa-utensils mr-2"></i><span data-i18n="thingsToDo.tabs.gastronomy">Gastronomía</span>
           </button>
           <button onclick="switchTab('cultura')"
                   id="tab-cultura"
                   class="tab-button px-6 py-3 font-semibold transition-all duration-300">
-            <i class="fas fa-landmark mr-2"></i>Cultura
+            <i class="fas fa-landmark mr-2"></i><span data-i18n="thingsToDo.tabs.culture">Cultura</span>
           </button>
         </div>
 
@@ -359,16 +419,16 @@
               <div class="p-6">
                 <h3 class="text-xl font-bold mb-3 flex items-center">
                   <i class="fas fa-hiking mr-2 text-green-600"></i>
-                  Laguna Esmeralda
+                  <span data-i18n="thingsToDo.trails.lagunaEsmeralda.title"></span>Laguna Esmeralda</span>
                 </h3>
                 <div class="space-y-2 text-sm text-gray-600 mb-4">
-                  <p><i class="fas fa-ruler mr-2"></i>9 km (ida y vuelta)</p>
-                  <p><i class="far fa-clock mr-2"></i>4-5 horas</p>
-                  <p><i class="fas fa-chart-line mr-2"></i>Dificultad: Media</p>
-                  <p><i class="fas fa-mountain mr-2"></i>Desnivel: 220m</p>
-                  <p><i class="fas fa-map-marker-alt mr-2"></i>18 km desde PompinHouse</p>
+                  <p><i class="fas fa-ruler mr-2"></i><span data-i18n="thingsToDo.trails.lagunaEsmeralda.stats.dist">9 km (ida y vuelta)</span></p>
+                  <p><i class="far fa-clock mr-2"></i><span data-i18n="thingsToDo.trails.lagunaEsmeralda.stats.time">4-5 horas</span></p>
+                  <p><i class="fas fa-chart-line mr-2"></i><span data-i18n="thingsToDo.trails.lagunaEsmeralda.stats.diff">Dificultad: Media</span></p>
+                  <p><i class="fas fa-mountain mr-2"></i><span data-i18n="thingsToDo.trails.lagunaEsmeralda.stats.elev">Desnivel: 220m</span></p>
+                  <p><i class="fas fa-map-marker-alt mr-2"></i><span data-i18n="thingsToDo.trails.lagunaEsmeralda.stats.from">18 km desde PompinHouse</span></p>
                 </div>
-                <p class="text-gray-700 mb-4">Sendero icónico de Ushuaia con vistas espectaculares de la laguna color esmeralda.</p>
+                <p class="text-gray-700 mb-4" data-i18n="thingsToDo.trails.lagunaEsmeralda.desc">Sendero icónico de Ushuaia con vistas espectaculares de la laguna color esmeralda.</p>
               </div>
             </div>
 
@@ -378,16 +438,16 @@
               <div class="p-6">
                 <h3 class="text-xl font-bold mb-3 flex items-center">
                   <i class="fas fa-hiking mr-2 text-green-600"></i>
-                  Glaciar Martial
+                  <span data-i18n="thingsToDo.trails.glaciarMartial.title">Glaciar Martial</span>
                 </h3>
                 <div class="space-y-2 text-sm text-gray-600 mb-4">
-                  <p><i class="fas fa-ruler mr-2"></i>2.6 km (sendero)</p>
-                  <p><i class="far fa-clock mr-2"></i>1.5-2 horas</p>
-                  <p><i class="fas fa-chart-line mr-2"></i>Dificultad: Baja-Media</p>
-                  <p><i class="fas fa-mountain mr-2"></i>Desnivel: 200m</p>
-                  <p><i class="fas fa-map-marker-alt mr-2"></i>7 km desde PompinHouse</p>
+                  <p><i class="fas fa-ruler mr-2"></i><span data-i18n="thingsToDo.trails.glaciarMartial.stats.dist">2.6 km (sendero)</span></p>
+                  <p><i class="far fa-clock mr-2"></i><span data-i18n="thingsToDo.trails.glaciarMartial.stats.time">1.5-2 horas</span></p>
+                  <p><i class="fas fa-chart-line mr-2"></i><span data-i18n="thingsToDo.trails.glaciarMartial.stats.diff">Dificultad: Baja-Media</span></p>
+                  <p><i class="fas fa-mountain mr-2"></i><span data-i18n="thingsToDo.trails.glaciarMartial.stats.elev">Desnivel: 200m</span></p>
+                  <p><i class="fas fa-map-marker-alt mr-2"></i><span data-i18n="thingsToDo.trails.glaciarMartial.stats.from">7 km desde PompinHouse</span></p>
                 </div>
-                <p class="text-gray-700 mb-4">Sendero accesible con vistas panorámicas de Ushuaia y el canal Beagle.</p>
+                <p class="text-gray-700 mb-4" data-i18n="thingsToDo.trails.glaciarMartial.desc">Sendero accesible con vistas panorámicas de Ushuaia y el canal Beagle.</p>
               </div>
             </div>
 
@@ -397,16 +457,16 @@
               <div class="p-6">
                 <h3 class="text-xl font-bold mb-3 flex items-center">
                   <i class="fas fa-hiking mr-2 text-green-600"></i>
-                  Glaciar Vinciguerra
+                  <span data-i18n="thingsToDo.trails.glaciarVinciguerra.title">Glaciar Vinciguerra</span>
                 </h3>
                 <div class="space-y-2 text-sm text-gray-600 mb-4">
-                  <p><i class="fas fa-ruler mr-2"></i>14 km (sendero)</p>
-                  <p><i class="far fa-clock mr-2"></i>8-9 horas</p>
-                  <p><i class="fas fa-chart-line mr-2"></i>Dificultad: Alta</p>
-                  <p><i class="fas fa-mountain mr-2"></i>Desnivel: 650m</p>
-                  <p><i class="fas fa-map-marker-alt mr-2"></i>7 km desde PompinHouse</p>
+                  <p><i class="fas fa-ruler mr-2"></i><span data-i18n="thingsToDo.trails.glaciarVinciguerra.stats.dist">14 km (sendero)</span></p>
+                  <p><i class="far fa-clock mr-2"></i><span data-i18n="thingsToDo.trails.glaciarVinciguerra.stats.time">8-9 horas</span></p>
+                  <p><i class="fas fa-chart-line mr-2"></i><span data-i18n="thingsToDo.trails.glaciarVinciguerra.stats.diff">Dificultad: Alta</span></p>
+                  <p><i class="fas fa-mountain mr-2"></i><span data-i18n="thingsToDo.trails.glaciarVinciguerra.stats.elev">Desnivel: 650m</span></p>
+                  <p><i class="fas fa-map-marker-alt mr-2"></i><span data-i18n="thingsToDo.trails.glaciarVinciguerra.stats.from">7 km desde PompinHouse</span></p>
                 </div>
-                <p class="text-gray-700 mb-4">Trekking desafiante con recompensas increíbles: glaciar, laguna de los Témpanos.</p>
+                <p class="text-gray-700 mb-4" data-i18n="thingsToDo.trails.glaciarVinciguerra.desc">Trekking desafiante con recompensas increíbles: glaciar, laguna de los Témpanos.</p>
               </div>
             </div>
 
@@ -416,16 +476,16 @@
               <div class="p-6">
                 <h3 class="text-xl font-bold mb-3 flex items-center">
                   <i class="fas fa-tree mr-2 text-green-600"></i>
-                  Parque Nacional TdF
+                  <span data-i18n="thingsToDo.trails.parqueNacional.title">Parque Nacional TdF</span>
                 </h3>
                 <div class="space-y-2 text-sm text-gray-600 mb-4">
-                  <p><i class="fas fa-ruler mr-2"></i>Múltiples senderos</p>
-                  <p><i class="far fa-clock mr-2"></i>Variada</p>
-                  <p><i class="fas fa-chart-line mr-2"></i>Dificultad: Variada</p>
-                  <p><i class="fas fa-mountain mr-2"></i>Según sendero</p>
-                  <p><i class="fas fa-map-marker-alt mr-2"></i>12 km desde PompinHouse</p>
+                  <p><i class="fas fa-ruler mr-2"></i><span data-i18n="thingsToDo.trails.parqueNacional.stats.dist">Múltiples senderos</span></p>
+                  <p><i class="far fa-clock mr-2"></i><span data-i18n="thingsToDo.trails.parqueNacional.stats.time">Variada</span></p>
+                  <p><i class="fas fa-chart-line mr-2"></i><span data-i18n="thingsToDo.trails.parqueNacional.stats.diff">Dificultad: Variada</span></p>
+                  <p><i class="fas fa-mountain mr-2"></i><span data-i18n="thingsToDo.trails.parqueNacional.stats.elev">Según sendero</span></p>
+                  <p><i class="fas fa-map-marker-alt mr-2"></i><span data-i18n="thingsToDo.trails.parqueNacional.stats.from">12 km desde PompinHouse</span></p>
                 </div>
-                <p class="text-gray-700 mb-4">El único parque nacional con costa marítima de Argentina. Imperdible.</p>
+                <p class="text-gray-700 mb-4" data-i18n="thingsToDo.trails.parqueNacional.desc">El único parque nacional con costa marítima de Argentina. Imperdible.</p>
               </div>
             </div>
 
@@ -435,16 +495,16 @@
               <div class="p-6">
                 <h3 class="text-xl font-bold mb-3 flex items-center">
                   <i class="fas fa-ship mr-2 text-blue-600"></i>
-                  Faro Les Eclaireurs
+                  <span data-i18n="thingsToDo.trails.faro.title">Faro Les Eclaireurs</span>
                 </h3>
                 <div class="space-y-2 text-sm text-gray-600 mb-4">
-                  <p><i class="fas fa-ruler mr-2"></i>Navegación en barco</p>
-                  <p><i class="far fa-clock mr-2"></i>2-3 horas</p>
-                  <p><i class="fas fa-chart-line mr-2"></i>Dificultad: Baja</p>
-                  <p><i class="fas fa-water mr-2"></i>Canal Beagle</p>
-                  <p><i class="fas fa-map-marker-alt mr-2"></i>Desde puerto Ushuaia</p>
+                  <p><i class="fas fa-ruler mr-2"></i><span data-i18n="thingsToDo.trails.faro.stats.dist">Navegación en barco</span></p>
+                  <p><i class="far fa-clock mr-2"></i><span data-i18n="thingsToDo.trails.faro.stats.time">2-3 horas</span></p>
+                  <p><i class="fas fa-chart-line mr-2"></i><span data-i18n="thingsToDo.trails.faro.stats.diff">Dificultad: Baja</span></p>
+                  <p><i class="fas fa-water mr-2"></i><span data-i18n="thingsToDo.trails.faro.stats.elev">Canal Beagle</span></p>
+                  <p><i class="fas fa-map-marker-alt mr-2"></i><span data-i18n="thingsToDo.trails.faro.stats.from">Desde puerto Ushuaia</span></p>
                 </div>
-                <p class="text-gray-700 mb-4">Icónico faro del Canal Beagle. Navegación con lobos marinos y aves.</p>
+                <p class="text-gray-700 mb-4" data-i18n="thingsToDo.trails.faro.desc">Icónico faro del Canal Beagle. Navegación con lobos marinos y aves.</p>
               </div>
             </div>
 
@@ -454,16 +514,16 @@
               <div class="p-6">
                 <h3 class="text-xl font-bold mb-3 flex items-center">
                   <i class="fas fa-anchor mr-2 text-orange-600"></i>
-                  Cabo San Pablo
+                  <span data-i18n="thingsToDo.trails.caboSanPablo.title">Cabo San Pablo</span>
                 </h3>
                 <div class="space-y-2 text-sm text-gray-600 mb-4">
-                  <p><i class="fas fa-ruler mr-2"></i>108 km desde Ushuaia</p>
-                  <p><i class="far fa-clock mr-2"></i>Día completo</p>
-                  <p><i class="fas fa-chart-line mr-2"></i>Dificultad: Baja</p>
-                  <p><i class="fas fa-car mr-2"></i>Requiere vehículo</p>
-                  <p><i class="fas fa-map-marker-alt mr-2"></i>Costa Atlántica TdF</p>
+                  <p><i class="fas fa-ruler mr-2"></i><span data-i18n="thingsToDo.trails.caboSanPablo.stats.dist">108 km desde Ushuaia</span></p>
+                  <p><i class="far fa-clock mr-2"></i><span data-i18n="thingsToDo.trails.caboSanPablo.stats.time">Día completo</span></p>
+                  <p><i class="fas fa-chart-line mr-2"></i><span data-i18n="thingsToDo.trails.caboSanPablo.stats.diff">Dificultad: Baja</span></p>
+                  <p><i class="fas fa-car mr-2"></i><span data-i18n="thingsToDo.trails.caboSanPablo.stats.elev">Requiere vehículo</span></p>
+                  <p><i class="fas fa-map-marker-alt mr-2"></i><span data-i18n="thingsToDo.trails.caboSanPablo.stats.from">Costa Atlántica TdF</span></p>
                 </div>
-                <p class="text-gray-700 mb-4">Barco Desdemona varado. Paisaje único en la costa atlántica fueguina.</p>
+                <p class="text-gray-700 mb-4" data-i18n="thingsToDo.trails.caboSanPablo.desc">Barco Desdemona varado. Paisaje único en la costa atlántica fueguina.</p>
               </div>
             </div>
           </div>
@@ -475,108 +535,108 @@
             <!-- Restaurant 1 -->
             <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300">
               <h3 class="text-xl font-bold mb-2">
-                <i class="fas fa-beer text-amber-600 mr-2"></i>Santos Bar
+                <i class="fas fa-beer text-amber-600 mr-2"></i><span data-i18n="thingsToDo.gastronomy.santos.title">Santos Bar</span>
               </h3>
-              <p class="text-gray-600 mb-2">Cervecería craft</p>
+              <p class="text-gray-600 mb-2" data-i18n="thingsToDo.gastronomy.santos.type">Cervecería craft</p>
               <p class="text-sm text-gray-500 mb-3">💰 $$ - $$$</p>
               <p class="text-sm text-gray-700 mb-3">
-                <i class="fas fa-map-marker-alt mr-1"></i>10 min <i class="fas fa-walking ml-1"></i><br>
+                <i class="fas fa-map-marker-alt mr-1"></i>10 <span data-i18n="location.cards.minutes">min</span> <i class="fas fa-walking ml-1"></i><br>
                 Maipú 773
               </p>
               <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornero+325,Ushuaia&destination=Maipú+773,Ushuaia&travelmode=walking"
                  target="_blank"
                  class="text-primary hover:text-primary/80 font-semibold text-sm">
-                Ver ruta <i class="fas fa-arrow-right ml-1"></i>
+                <span data-i18n="location.cards.viewRoute">Ver ruta</span> <i class="fas fa-arrow-right ml-1"></i>
               </a>
             </div>
 
             <!-- Restaurant 2 -->
             <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300">
               <h3 class="text-xl font-bold mb-2">
-                <i class="fas fa-glass-whiskey text-green-700 mr-2"></i>Bar Dublín
+                <i class="fas fa-glass-whiskey text-green-700 mr-2"></i><span data-i18n="thingsToDo.gastronomy.dublin.title">Bar Dublín</span>
               </h3>
-              <p class="text-gray-600 mb-2">Pub irlandés</p>
+              <p class="text-gray-600 mb-2" data-i18n="thingsToDo.gastronomy.dublin.type">Pub irlandés</p>
               <p class="text-sm text-gray-500 mb-3">💰 $$ - $$$</p>
               <p class="text-sm text-gray-700 mb-3">
-                <i class="fas fa-map-marker-alt mr-1"></i>12 min <i class="fas fa-walking ml-1"></i><br>
+                <i class="fas fa-map-marker-alt mr-1"></i>12 <span data-i18n="location.cards.minutes">min</span> <i class="fas fa-walking ml-1"></i><br>
                 9 de Julio 168
               </p>
               <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornero+325,Ushuaia&destination=9+de+Julio+168,Ushuaia&travelmode=walking"
                  target="_blank"
                  class="text-primary hover:text-primary/80 font-semibold text-sm">
-                Ver ruta <i class="fas fa-arrow-right ml-1"></i>
+                <span data-i18n="location.cards.viewRoute">Ver ruta</span> <i class="fas fa-arrow-right ml-1"></i>
               </a>
             </div>
 
             <!-- Restaurant 3 -->
             <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300">
               <h3 class="text-xl font-bold mb-2">
-                <i class="fas fa-wine-bottle text-red-700 mr-2"></i>Bodegón Fueguino
+                <i class="fas fa-wine-bottle text-red-700 mr-2"></i><span data-i18n="thingsToDo.gastronomy.bodegon.title">Bodegón Fueguino</span>
               </h3>
-              <p class="text-gray-600 mb-2">Cocina tradicional</p>
+              <p class="text-gray-600 mb-2" data-i18n="thingsToDo.gastronomy.bodegon.type">Cocina tradicional</p>
               <p class="text-sm text-gray-500 mb-3">💰 $$$ - $$$$</p>
               <p class="text-sm text-gray-700 mb-3">
-                <i class="fas fa-map-marker-alt mr-1"></i>8 min <i class="fas fa-walking ml-1"></i><br>
+                <i class="fas fa-map-marker-alt mr-1"></i>8 <span data-i18n="location.cards.minutes">min</span> <i class="fas fa-walking ml-1"></i><br>
                 San Martín 859
               </p>
               <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornero+325,Ushuaia&destination=San+Martín+859,Ushuaia&travelmode=walking"
                  target="_blank"
                  class="text-primary hover:text-primary/80 font-semibold text-sm">
-                Ver ruta <i class="fas fa-arrow-right ml-1"></i>
+                <span data-i18n="location.cards.viewRoute">Ver ruta</span> <i class="fas fa-arrow-right ml-1"></i>
               </a>
             </div>
 
             <!-- Restaurant 4 -->
             <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300">
               <h3 class="text-xl font-bold mb-2">
-                <i class="fas fa-drumstick-bite text-orange-700 mr-2"></i>Isabel al Disco
+                <i class="fas fa-drumstick-bite text-orange-700 mr-2"></i><span data-i18n="thingsToDo.gastronomy.isabel.title">Isabel al Disco</span>
               </h3>
-              <p class="text-gray-600 mb-2">Cordero patagónico</p>
+              <p class="text-gray-600 mb-2" data-i18n="thingsToDo.gastronomy.isabel.type">Cordero patagónico</p>
               <p class="text-sm text-gray-500 mb-3">💰 $$$ - $$$$</p>
               <p class="text-sm text-gray-700 mb-3">
-                <i class="fas fa-map-marker-alt mr-1"></i>10 min <i class="fas fa-walking ml-1"></i><br>
+                <i class="fas fa-map-marker-alt mr-1"></i>10 <span data-i18n="location.cards.minutes">min</span> <i class="fas fa-walking ml-1"></i><br>
                 Gob. P. Godoy 15
               </p>
               <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornero+325,Ushuaia&destination=Gob.+P.+Godoy+15,Ushuaia&travelmode=walking"
                  target="_blank"
                  class="text-primary hover:text-primary/80 font-semibold text-sm">
-                Ver ruta <i class="fas fa-arrow-right ml-1"></i>
+                <span data-i18n="location.cards.viewRoute">Ver ruta</span> <i class="fas fa-arrow-right ml-1"></i>
               </a>
             </div>
 
             <!-- Restaurant 5 -->
             <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300">
               <h3 class="text-xl font-bold mb-2">
-                <i class="fas fa-coffee text-brown-700 mr-2"></i>Tante Sara
+                <i class="fas fa-coffee text-brown-700 mr-2"></i><span data-i18n="thingsToDo.gastronomy.tante.title">Tante Sara</span>
               </h3>
-              <p class="text-gray-600 mb-2">Café & Pastelería</p>
+              <p class="text-gray-600 mb-2" data-i18n="thingsToDo.gastronomy.tante.type">Café & Pastelería</p>
               <p class="text-sm text-gray-500 mb-3">💰 $$ - $$$</p>
               <p class="text-sm text-gray-700 mb-3">
-                <i class="fas fa-map-marker-alt mr-1"></i>9 min <i class="fas fa-walking ml-1"></i><br>
+                <i class="fas fa-map-marker-alt mr-1"></i>9 <span data-i18n="location.cards.minutes">min</span> <i class="fas fa-walking ml-1"></i><br>
                 San Martín 701
               </p>
               <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornero+325,Ushuaia&destination=San+Martín+701,Ushuaia&travelmode=walking"
                  target="_blank"
                  class="text-primary hover:text-primary/80 font-semibold text-sm">
-                Ver ruta <i class="fas fa-arrow-right ml-1"></i>
+                <span data-i18n="location.cards.viewRoute">Ver ruta</span> <i class="fas fa-arrow-right ml-1"></i>
               </a>
             </div>
 
             <!-- Restaurant 6 -->
             <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300">
               <h3 class="text-xl font-bold mb-2">
-                <i class="fas fa-mug-hot text-brown-600 mr-2"></i>Ramos Generales
+                <i class="fas fa-mug-hot text-brown-600 mr-2"></i><span data-i18n="thingsToDo.gastronomy.ramos.title">Ramos Generales</span>
               </h3>
-              <p class="text-gray-600 mb-2">Café histórico</p>
+              <p class="text-gray-600 mb-2" data-i18n="thingsToDo.gastronomy.ramos.type">Café histórico</p>
               <p class="text-sm text-gray-500 mb-3">💰 $$ - $$$</p>
               <p class="text-sm text-gray-700 mb-3">
-                <i class="fas fa-map-marker-alt mr-1"></i>7 min <i class="fas fa-walking ml-1"></i><br>
+                <i class="fas fa-map-marker-alt mr-1"></i>7 <span data-i18n="location.cards.minutes">min</span> <i class="fas fa-walking ml-1"></i><br>
                 Maipú 749
               </p>
               <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornero+325,Ushuaia&destination=Maipú+749,Ushuaia&travelmode=walking"
                  target="_blank"
                  class="text-primary hover:text-primary/80 font-semibold text-sm">
-                Ver ruta <i class="fas fa-arrow-right ml-1"></i>
+                <span data-i18n="location.cards.viewRoute">Ver ruta</span> <i class="fas fa-arrow-right ml-1"></i>
               </a>
             </div>
           </div>
@@ -590,13 +650,13 @@
               <div class="p-8">
                 <h3 class="text-2xl font-bold mb-3 flex items-center">
                   <i class="fas fa-landmark mr-3 text-yellow-600"></i>
-                  Museo Marítimo y del Presidio
+                  <span data-i18n="thingsToDo.culture.presidio.title">Museo Marítimo y del Presidio</span>
                 </h3>
                 <div class="space-y-2 text-sm text-gray-600 mb-4">
-                  <p><i class="fas fa-map-marker-alt mr-2"></i>12 min caminando</p>
-                  <p><i class="fas fa-map-signs mr-2"></i>Yaganes y Gob. Paz</p>
+                  <p><i class="fas fa-map-marker-alt mr-2"></i>12 <span data-i18n="location.cards.minutes">min</span> <span data-i18n="location.cards.walking">caminando</span></p>
+                  <p><i class="fas fa-map-signs mr-2"></i><span data-i18n="thingsToDo.culture.presidio.location">Yaganes y Gob. Paz</span></p>
                 </div>
-                <p class="text-gray-700 mb-6">
+                <p class="text-gray-700 mb-6" data-i18n="thingsToDo.culture.presidio.desc">
                   Museo fascinante que cuenta la historia de Ushuaia desde la época de los pueblos originarios,
                   pasando por la prisión más austral del mundo, hasta convertirse en la ciudad que es hoy.
                   Imperdible para entender el contexto histórico del Fin del Mundo.
@@ -604,7 +664,7 @@
                 <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornero+325,Ushuaia&destination=Museo+Maritimo+Ushuaia&travelmode=walking"
                    target="_blank"
                    class="text-primary hover:text-primary/80 font-semibold">
-                  Ver ruta <i class="fas fa-arrow-right ml-1"></i>
+                  <span data-i18n="location.cards.viewRoute">Ver ruta</span> <i class="fas fa-arrow-right ml-1"></i>
                 </a>
               </div>
             </div>
@@ -623,9 +683,9 @@
       <!-- Header -->
       <div class="text-center mb-12 animate-on-scroll">
         <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
-          <i class="fas fa-handshake mr-2"></i>Servicios de Confianza
+          <i class="fas fa-handshake mr-2"></i><span data-i18n="recommendedServices.title">Servicios de Confianza</span>
         </h2>
-        <p class="text-lg text-gray-600">
+        <p class="text-lg text-gray-600" data-i18n="recommendedServices.subtitle">
           Contactos verificados con descuento especial<br>
           para huéspedes de PompinHouse
         </p>
@@ -640,34 +700,34 @@
               <i class="fas fa-hiking"></i>
             </div>
             <div>
-              <h3 class="text-2xl font-bold text-gray-800">Marcos Vargas</h3>
-              <p class="text-gray-600">Guía de Montaña Certificado</p>
+              <h3 class="text-2xl font-bold text-gray-800" data-i18n="recommendedServices.guide.name">Marcos Vargas</h3>
+              <p class="text-gray-600" data-i18n="recommendedServices.guide.role">Guía de Montaña Certificado</p>
             </div>
           </div>
 
           <div class="border-t-2 border-gray-200 my-4"></div>
 
-          <h4 class="font-bold text-lg mb-3">Especialidades:</h4>
+          <h4 class="font-bold text-lg mb-3" data-i18n="recommendedServices.guide.specialtiesTitle">Especialidades:</h4>
           <ul class="space-y-3 mb-6">
             <li class="text-gray-700">
               <i class="fas fa-check-circle text-green-600 mr-2"></i>
-              <span class="font-semibold">Laguna Esmeralda</span> (guiado)
+              <span class="font-semibold" data-i18n="recommendedServices.guide.specialties.0">Laguna Esmeralda (guiado)</span>
             </li>
             <li class="text-gray-700">
               <i class="fas fa-check-circle text-green-600 mr-2"></i>
-              <span class="font-semibold">Glaciar Vinciguerra</span>
+              <span class="font-semibold" data-i18n="recommendedServices.guide.specialties.1">Glaciar Vinciguerra</span>
             </li>
             <li class="text-gray-700">
               <i class="fas fa-check-circle text-green-600 mr-2"></i>
-              <span class="font-semibold">Trekking personalizado</span>
+              <span class="font-semibold" data-i18n="recommendedServices.guide.specialties.2">Trekking personalizado</span>
             </li>
             <li class="text-gray-700">
               <i class="fas fa-check-circle text-green-600 mr-2"></i>
-              <span class="font-semibold">Consultar precios</span>
+              <span class="font-semibold" data-i18n="recommendedServices.guide.specialties.3">Consultar precios</span>
             </li>
           </ul>
 
-          <p class="text-sm italic text-gray-600 mb-6">
+          <p class="text-sm italic text-gray-600 mb-6" data-i18n="recommendedServices.guide.include">
             Incluye: Transporte + Equipo + Seguridad + Fotos profesionales
           </p>
 
@@ -681,7 +741,7 @@
             </a>
             <a href="tel:+5492901401423"
                class="bg-primary hover:bg-primary/90 text-white font-semibold px-4 py-3 rounded-lg transition-all duration-300 text-center">
-              <i class="fas fa-phone mr-2"></i>Llamar
+              <i class="fas fa-phone mr-2"></i><span data-i18n="stayInfo.contact.call">Llamar</span>
             </a>
           </div>
 
@@ -695,8 +755,7 @@
 
           <div class="bg-green-100 border-2 border-green-600 rounded-lg p-4 text-center">
             <p class="font-bold text-green-800">
-              <i class="fas fa-tag mr-2"></i>Descuento especial<br>
-              <span class="text-sm font-normal">mencionando PompinHouse</span>
+              <i class="fas fa-tag mr-2"></i><span data-i18n="recommendedServices.guide.discount">Descuento especial<br><span class="text-sm font-normal">mencionando PompinHouse</span></span>
             </p>
           </div>
         </div>
@@ -708,38 +767,38 @@
               <i class="fas fa-car"></i>
             </div>
             <div>
-              <h3 class="text-2xl font-bold text-gray-800">Xalpen Transportes</h3>
-              <p class="text-gray-600">Traslados y Excursiones</p>
+              <h3 class="text-2xl font-bold text-gray-800" data-i18n="recommendedServices.transport.name">Xalpen Transportes</h3>
+              <p class="text-gray-600" data-i18n="recommendedServices.transport.role">Traslados y Excursiones</p>
             </div>
           </div>
 
           <div class="border-t-2 border-gray-200 my-4"></div>
 
-          <h4 class="font-bold text-lg mb-3">Servicios:</h4>
+          <h4 class="font-bold text-lg mb-3" data-i18n="recommendedServices.transport.servicesTitle">Servicios:</h4>
           <ul class="space-y-3 mb-6">
             <li class="text-gray-700">
               <i class="fas fa-check-circle text-blue-600 mr-2"></i>
-              <span class="font-semibold">Aeropuerto ↔ PompinHouse</span>
+              <span class="font-semibold" data-i18n="recommendedServices.transport.services.0">Aeropuerto ↔ PompinHouse</span>
             </li>
             <li class="text-gray-700">
               <i class="fas fa-check-circle text-blue-600 mr-2"></i>
-              <span class="font-semibold">Parque Nacional TdF</span>
+              <span class="font-semibold" data-i18n="recommendedServices.transport.services.1">Parque Nacional TdF</span>
             </li>
             <li class="text-gray-700">
               <i class="fas fa-check-circle text-blue-600 mr-2"></i>
-              <span class="font-semibold">Lagos Fagnano y Escondido</span>
+              <span class="font-semibold" data-i18n="recommendedServices.transport.services.2">Lagos Fagnano y Escondido</span>
             </li>
             <li class="text-gray-700">
               <i class="fas fa-check-circle text-blue-600 mr-2"></i>
-              <span class="font-semibold">Traslados personalizados</span>
+              <span class="font-semibold" data-i18n="recommendedServices.transport.services.3">Traslados personalizados</span>
             </li>
             <li class="text-gray-700">
               <i class="fas fa-info-circle text-blue-600 mr-2"></i>
-              <span class="font-semibold">Consultar precios y disponibilidad</span>
+              <span class="font-semibold" data-i18n="recommendedServices.transport.services.4">Consultar precios y disponibilidad</span>
             </li>
           </ul>
 
-          <p class="text-sm italic text-gray-600 mb-6">
+          <p class="text-sm italic text-gray-600 mb-6" data-i18n="recommendedServices.transport.vehicle">
             Vehículos: 4x4 + Van turística
           </p>
 
@@ -753,7 +812,7 @@
             </a>
             <a href="tel:+5492901111111"
                class="bg-primary hover:bg-primary/90 text-white font-semibold px-4 py-3 rounded-lg transition-all duration-300 text-center">
-              <i class="fas fa-phone mr-2"></i>Llamar
+              <i class="fas fa-phone mr-2"></i><span data-i18n="stayInfo.contact.call">Llamar</span>
             </a>
           </div>
 
@@ -772,8 +831,7 @@
 
           <div class="bg-green-100 border-2 border-green-600 rounded-lg p-4 text-center">
             <p class="font-bold text-green-800">
-              <i class="fas fa-tag mr-2"></i>10% OFF<br>
-              <span class="text-sm font-normal">mencionando PompinHouse</span>
+              <i class="fas fa-tag mr-2"></i><span data-i18n="recommendedServices.transport.discount">10% OFF<br><span class="text-sm font-normal">mencionando PompinHouse</span></span>
             </p>
           </div>
         </div>
@@ -782,8 +840,7 @@
       <!-- Disclaimer -->
       <div class="text-center text-sm text-gray-500 italic animate-on-scroll">
         <i class="fas fa-info-circle mr-2"></i>
-        Nota: Servicios independientes recomendados. Precios orientativos actualizados a Diciembre 2024.
-        PompinHouse no cobra comisión.
+        <span data-i18n="recommendedServices.disclaimer">Nota: Servicios independientes recomendados. Precios orientativos actualizados a Diciembre 2024. PompinHouse no cobra comisión.</span>
       </div>
     </div>
   </section>
@@ -796,7 +853,7 @@
       <!-- Header -->
       <div class="text-center mb-12 animate-on-scroll">
         <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
-          <i class="fas fa-lightbulb mr-2"></i>Tips para tu estadía
+          <i class="fas fa-lightbulb mr-2"></i><span data-i18n="tips.title">Tips para tu estadía</span>
         </h2>
       </div>
 
@@ -808,7 +865,7 @@
                   class="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-gray-50 transition-all duration-300">
             <span class="font-bold text-lg">
               <i class="fas fa-snowflake mr-3 text-blue-500"></i>
-              Clima y qué traer
+              <span data-i18n="tips.weather.title"></span>Clima y qué traer</span>
             </span>
             <i class="fas fa-plus accordion-icon" id="icon-clima"></i>
           </button>
@@ -816,22 +873,22 @@
             <div class="px-6 pb-6">
               <div class="border-t-2 border-gray-200 my-4"></div>
               <p class="font-semibold mb-3">
-                <i class="fas fa-temperature-low mr-2"></i>Temperatura actual: 5-12°C
+                <i class="fas fa-temperature-low mr-2"></i><span data-i18n="tips.weather.temp">Temperatura actual: 5-12°C</span>
               </p>
-              <p class="text-gray-700 mb-4">
+              <p class="text-gray-700 mb-4" data-i18n="tips.weather.desc">
                 El clima en Ushuaia es variable incluso en verano. Vestite en capas y siempre llevá:
               </p>
               <ul class="space-y-2 text-gray-700">
-                <li><i class="fas fa-check text-secondary mr-2"></i>Campera impermeable</li>
-                <li><i class="fas fa-check text-secondary mr-2"></i>Polar o buzo térmico</li>
-                <li><i class="fas fa-check text-secondary mr-2"></i>Remera manga larga</li>
-                <li><i class="fas fa-check text-secondary mr-2"></i>Pantalón largo (no jeans)</li>
-                <li><i class="fas fa-check text-secondary mr-2"></i>Calzado impermeable</li>
-                <li><i class="fas fa-check text-secondary mr-2"></i>Gorro y guantes</li>
-                <li><i class="fas fa-check text-secondary mr-2"></i>Protector solar (sí, en serio!)</li>
+                <li><i class="fas fa-check text-secondary mr-2"></i><span data-i18n="tips.weather.items.0">Campera impermeable</span></li>
+                <li><i class="fas fa-check text-secondary mr-2"></i><span data-i18n="tips.weather.items.1">Polar o buzo térmico</span></li>
+                <li><i class="fas fa-check text-secondary mr-2"></i><span data-i18n="tips.weather.items.2">Remera manga larga</span></li>
+                <li><i class="fas fa-check text-secondary mr-2"></i><span data-i18n="tips.weather.items.3">Pantalón largo (no jeans)</span></li>
+                <li><i class="fas fa-check text-secondary mr-2"></i><span data-i18n="tips.weather.items.4">Calzado impermeable</span></li>
+                <li><i class="fas fa-check text-secondary mr-2"></i><span data-i18n="tips.weather.items.5">Gorro y guantes</span></li>
+                <li><i class="fas fa-check text-secondary mr-2"></i><span data-i18n="tips.weather.items.6">Protector solar (sí, en serio!)</span></li>
               </ul>
               <p class="mt-4 text-gray-600">
-                <i class="fas fa-cloud-rain mr-2"></i>Lluvia posible todo el año
+                <i class="fas fa-cloud-rain mr-2"></i><span data-i18n="tips.weather.rain">Lluvia posible todo el año</span>
               </p>
             </div>
           </div>
@@ -843,7 +900,7 @@
                   class="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-gray-50 transition-all duration-300">
             <span class="font-bold text-lg">
               <i class="fas fa-hiking mr-3 text-green-600"></i>
-              Consejos para senderos
+              <span data-i18n="tips.hiking.title">Consejos para senderos</span>
             </span>
             <i class="fas fa-plus accordion-icon" id="icon-senderos-tips"></i>
           </button>
@@ -851,28 +908,28 @@
             <div class="px-6 pb-6">
               <div class="border-t-2 border-gray-200 my-4"></div>
               <p class="font-semibold mb-2">
-                <i class="fas fa-clock mr-2"></i>Salí temprano (8-9 AM)
+                <i class="fas fa-clock mr-2"></i><span data-i18n="tips.hiking.early">Salí temprano (8-9 AM)</span>
               </p>
-              <p class="text-gray-700 mb-4">El viento aumenta por la tarde</p>
+              <p class="text-gray-700 mb-4" data-i18n="tips.hiking.wind">El viento aumenta por la tarde</p>
 
               <p class="font-semibold mb-3">
-                <i class="fas fa-backpack mr-2"></i>Llevá siempre:
+                <i class="fas fa-backpack mr-2"></i><span data-i18n="tips.hiking.bringTitle">Llevá siempre:</span>
               </p>
               <ul class="space-y-2 text-gray-700 mb-4">
-                <li><i class="fas fa-check text-secondary mr-2"></i>Agua (1.5L mínimo)</li>
-                <li><i class="fas fa-check text-secondary mr-2"></i>Snacks energéticos</li>
-                <li><i class="fas fa-check text-secondary mr-2"></i>Botiquín básico</li>
-                <li><i class="fas fa-check text-secondary mr-2"></i>Celular cargado</li>
-                <li><i class="fas fa-check text-secondary mr-2"></i>Bolsa para basura</li>
+                <li><i class="fas fa-check text-secondary mr-2"></i><span data-i18n="tips.hiking.bringItems.0">Agua (1.5L mínimo)</span></li>
+                <li><i class="fas fa-check text-secondary mr-2"></i><span data-i18n="tips.hiking.bringItems.1">Snacks energéticos</span></li>
+                <li><i class="fas fa-check text-secondary mr-2"></i><span data-i18n="tips.hiking.bringItems.2">Botiquín básico</span></li>
+                <li><i class="fas fa-check text-secondary mr-2"></i><span data-i18n="tips.hiking.bringItems.3">Celular cargado</span></li>
+                <li><i class="fas fa-check text-secondary mr-2"></i><span data-i18n="tips.hiking.bringItems.4">Bolsa para basura</span></li>
               </ul>
 
               <p class="text-gray-700 mb-2">
-                <i class="fas fa-mobile-alt mr-2"></i>Descargá mapa offline
+                <i class="fas fa-mobile-alt mr-2"></i><span data-i18n="tips.hiking.offlineMap">Descargá mapa offline</span>
               </p>
-              <p class="text-sm text-gray-600 mb-4">(Maps.me o similar)</p>
+              <p class="text-sm text-gray-600 mb-4" data-i18n="tips.hiking.offlineMapDesc">(Maps.me o similar)</p>
 
               <p class="text-orange-600 font-semibold">
-                <i class="fas fa-exclamation-triangle mr-2"></i>Avisá a alguien tu ruta
+                <i class="fas fa-exclamation-triangle mr-2"></i><span data-i18n="tips.hiking.alert">Avisá a alguien tu ruta</span>
               </p>
             </div>
           </div>
@@ -884,7 +941,7 @@
                   class="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-gray-50 transition-all duration-300">
             <span class="font-bold text-lg">
               <i class="fas fa-ambulance mr-3 text-red-600"></i>
-              Contactos de emergencia
+              <span data-i18n="tips.emergency.title">Contactos de emergencia</span>
             </span>
             <i class="fas fa-plus accordion-icon" id="icon-emergencias"></i>
           </button>
@@ -892,33 +949,33 @@
             <div class="px-6 pb-6">
               <div class="border-t-2 border-gray-200 my-4"></div>
 
-              <h4 class="font-bold text-lg mb-3">Números de Emergencia Generales (Argentina)</h4>
+              <h4 class="font-bold text-lg mb-3" data-i18n="tips.emergency.generalTitle">Números de Emergencia Generales (Argentina)</h4>
               <div class="space-y-2 text-gray-700 mb-4">
-                <p><i class="fas fa-phone-alt mr-2"></i><strong>911 / 101:</strong> Policía y Emergencias Generales</p>
-                <p><i class="fas fa-fire-extinguisher mr-2"></i><strong>100:</strong> Bomberos (incendios, rescates)</p>
-                <p><i class="fas fa-hospital mr-2"></i><strong>107:</strong> Emergencias Médicas (SAME)</p>
-                <p><i class="fas fa-shield-alt mr-2"></i><strong>103:</strong> Defensa Civil (desastres naturales, asistencia humanitaria)</p>
+                <p><i class="fas fa-phone-alt mr-2"></i><strong data-i18n="tips.emergency.generalItems.0">911 / 101: Policía y Emergencias Generales</strong></p>
+                <p><i class="fas fa-fire-extinguisher mr-2"></i><strong data-i18n="tips.emergency.generalItems.1">100: Bomberos (incendios, rescates)</strong></p>
+                <p><i class="fas fa-hospital mr-2"></i><strong data-i18n="tips.emergency.generalItems.2">107: Emergencias Médicas (SAME)</strong></p>
+                <p><i class="fas fa-shield-alt mr-2"></i><strong data-i18n="tips.emergency.generalItems.3">103: Defensa Civil (desastres naturales, asistencia humanitaria)</strong></p>
               </div>
 
               <div class="border-t-2 border-gray-200 my-4"></div>
 
-              <h4 class="font-bold text-lg mb-3">Contactos Específicos de Ushuaia</h4>
+              <h4 class="font-bold text-lg mb-3" data-i18n="tips.emergency.localTitle">Contactos Específicos de Ushuaia</h4>
               <div class="space-y-2 text-gray-700 mb-4">
-                <p><i class="fas fa-shield-alt mr-2"></i><strong>Defensa Civil Ushuaia:</strong> 103 (24hs), (02901) 422108, (02901) 435316</p>
-                <p><i class="fas fa-phone-alt mr-2"></i><strong>Policía:</strong> (02901) 421355, 421416</p>
-                <p><i class="fas fa-fire-extinguisher mr-2"></i><strong>Bomberos Cuartel Central:</strong> (02901) 421333, 432800</p>
+                <p><i class="fas fa-shield-alt mr-2"></i><strong data-i18n="tips.emergency.localItems.0">Defensa Civil Ushuaia: 103 (24hs), (02901) 422108, (02901) 435316</strong></p>
+                <p><i class="fas fa-phone-alt mr-2"></i><strong data-i18n="tips.emergency.localItems.1">Policía: (02901) 421355, 421416</strong></p>
+                <p><i class="fas fa-fire-extinguisher mr-2"></i><strong data-i18n="tips.emergency.localItems.2">Bomberos Cuartel Central: (02901) 421333, 432800</strong></p>
               </div>
 
               <div class="border-t-2 border-gray-200 my-4"></div>
 
               <p class="font-semibold mb-2">
-                <i class="fas fa-home mr-2"></i>Pablo (PompinHouse):
+                <i class="fas fa-home mr-2"></i><span data-i18n="tips.emergency.pabloTitle">Pablo (PompinHouse):</span>
               </p>
               <p class="text-gray-700 mb-3">+54 2901 502672</p>
               <a href="https://wa.me/5492901502672?text=Hola%20Pablo,%20necesito%20ayuda%20urgente"
                  target="_blank"
                  class="inline-block bg-[#25D366] hover:bg-[#25D366]/90 text-white font-semibold px-4 py-2 rounded-lg transition-all duration-300">
-                <i class="fab fa-whatsapp mr-2"></i>WhatsApp
+                <i class="fab fa-whatsapp mr-2"></i><span data-i18n="tips.emergency.whatsappCta">WhatsApp</span>
               </a>
             </div>
           </div>
@@ -946,7 +1003,7 @@
         <!-- Contacto -->
         <div>
           <h4 class="font-bold text-lg mb-4">
-            <i class="fas fa-phone mr-2"></i>Contacto
+            <i class="fas fa-phone mr-2"></i><span data-i18n="footer.contact"></span>Contacto</span>
           </h4>
           <div class="space-y-2 text-white/90">
             <p>WhatsApp: +54 2901 502672</p>
@@ -957,7 +1014,7 @@
         <!-- Dirección -->
         <div>
           <h4 class="font-bold text-lg mb-4">
-            <i class="fas fa-map-marker-alt mr-2"></i>Dirección
+            <i class="fas fa-map-marker-alt mr-2"></i><span data-i18n="footer.address">Dirección</span>
           </h4>
           <div class="text-white/90">
             <p>Gobernador Cornero 325</p>
@@ -971,11 +1028,11 @@
 
       <!-- CTA WhatsApp -->
       <div class="text-center mb-8">
-        <p class="mb-4 text-lg">¿Alguna duda? Escribime</p>
+        <p class="mb-4 text-lg" data-i18n="footer.question">¿Alguna duda? Escribime</p>
         <a href="https://wa.me/5492901502672?text=Hola%20Pablo,%20soy%20hu%C3%A9sped%20de%20PompinHouse,%20necesito%20ayuda"
            target="_blank"
            class="inline-block bg-[#25D366] hover:bg-[#25D366]/90 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300">
-          <i class="fab fa-whatsapp mr-2 text-xl"></i>Abrir WhatsApp
+          <i class="fab fa-whatsapp mr-2 text-xl"></i><span data-i18n="footer.whatsapp">Abrir WhatsApp</span>
         </a>
       </div>
 
@@ -984,7 +1041,7 @@
       <!-- Copyright -->
       <div class="text-center text-white/70 text-sm">
         <p>&copy; 2024 PompinHouse</p>
-        <p class="mt-1">Hecho con ❤️ en Ushuaia</p>
+        <p class="mt-1" data-i18n="footer.madeWith">Hecho con ❤️ en Ushuaia</p>
       </div>
     </div>
   </footer>
@@ -1007,6 +1064,8 @@
   </div>
 
   <!-- JavaScript -->
+  <script src="js/translations.js"></script>
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
