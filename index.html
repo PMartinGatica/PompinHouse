@@ -58,7 +58,7 @@
 
   <!-- Loading Spinner -->
   <div id="loading-spinner" class="fixed inset-0 bg-white z-[10000] flex flex-col items-center justify-center">
-    <img src="assets/images/logo.jpg" alt="PompinHouse Logo" class="w-32 h-32 md:w-40 md:h-40 rounded-full animate-pulse object-cover">
+    <img src="assets/images/logo.jpg" alt="PompinHouse Logo" class="w-32 h-32 md:w-40 md:h-40 rounded-full animate-pulse" style="object-fit: contain; padding: 4px; background: white; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);">
     <p class="mt-4 text-xl font-semibold text-primary">Cargando...</p>
   </div>
 
@@ -75,7 +75,7 @@
     <!-- Contenido -->
     <div class="relative z-10 text-center px-4 animate-fade-in">
       <div class="mb-6 animate-bounce-slow">
-        <img src="assets/images/logo.jpg" alt="PompinHouse" class="w-24 h-24 md:w-32 md:h-32 mx-auto rounded-full shadow-2xl border-4 border-white object-cover">
+        <img src="assets/images/logo.jpg" alt="PompinHouse" class="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full shadow-2xl border-4 border-white" style="object-fit: contain; padding: 4px; background: white;">
       </div>
       <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 animate-slide-up">
         Bienvenido a PompinHouse
@@ -105,7 +105,7 @@
           <i class="fas fa-map-marker-alt mr-2"></i>¿Dónde estamos?
         </h2>
         <p class="text-lg md:text-xl text-gray-600">
-          Gobernador Cornejo 325<br>
+          Gobernador Cornero 325<br>
           Ushuaia, Tierra del Fuego
         </p>
       </div>
@@ -113,12 +113,13 @@
       <!-- Mapa principal -->
       <div class="mb-12 animate-on-scroll">
         <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2299.850348628621!2d-68.3061608!3d-54.800173400000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbc4c22d8deb04061%3A0x5c5178a6016e7b8c!2sGdor.%20Mario%20Cornero%20325%2C%20V9410JXA%20Ushuaia%2C%20Tierra%20del%20Fuego!5e0!3m2!1ses-419!2sar!4v1765550352507!5m2!1ses-419!2sar"
           width="100%"
           height="450"
           style="border:0; border-radius:16px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"
+          allowfullscreen=""
           loading="lazy"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2396.887543426786!2d-68.30749788843684!3d-54.807119973132496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbc4c22eefef17f53%3A0x1c8c64c0e7e3e0b4!2sGobernador%20Cornejo%20325%2C%20V9410%20Ushuaia%2C%20Tierra%20del%20Fuego!5e0!3m2!1ses-419!2sar!4v1733946000000!5m2!1ses-419!2sar"
-          allowfullscreen>
+          referrerpolicy="no-referrer-when-downgrade">
         </iframe>
       </div>
 
@@ -136,7 +137,7 @@
           <p class="text-sm text-gray-600 mb-4">
             <i class="fas fa-walking mr-1"></i>Caminando
           </p>
-          <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornejo+325,Ushuaia&destination=Centro+Ushuaia&travelmode=walking"
+          <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornero+325,Ushuaia&destination=Centro+Ushuaia&travelmode=walking"
              target="_blank"
              class="text-primary hover:text-primary/80 font-semibold text-sm">
             Ver ruta <i class="fas fa-arrow-right ml-1"></i>
@@ -155,7 +156,7 @@
           <p class="text-sm text-gray-600 mb-4">
             <i class="fas fa-car mr-1"></i>En auto
           </p>
-          <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornejo+325,Ushuaia&destination=Aeropuerto+Ushuaia&travelmode=driving"
+          <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornero+325,Ushuaia&destination=Aeropuerto+Internacional+Ushuaia&travelmode=driving"
              target="_blank"
              class="text-primary hover:text-primary/80 font-semibold text-sm">
             Ver ruta <i class="fas fa-arrow-right ml-1"></i>
@@ -167,14 +168,14 @@
           <div class="text-4xl mb-4 text-primary">
             <i class="fas fa-landmark"></i>
           </div>
-          <h3 class="font-bold text-lg mb-2">Museo Marítimo</h3>
+          <h3 class="font-bold text-lg mb-2">Presidio</h3>
           <div class="border-t-2 border-gray-200 my-3"></div>
           <p class="text-3xl font-bold text-primary mb-2">12 minutos</p>
           <div class="border-t-2 border-gray-200 my-3"></div>
           <p class="text-sm text-gray-600 mb-4">
             <i class="fas fa-walking mr-1"></i>Caminando
           </p>
-          <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornejo+325,Ushuaia&destination=Museo+Maritimo+Ushuaia&travelmode=walking"
+          <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornero+325,Ushuaia&destination=Museo+Maritimo+Presidio+Ushuaia&travelmode=walking"
              target="_blank"
              class="text-primary hover:text-primary/80 font-semibold text-sm">
             Ver ruta <i class="fas fa-arrow-right ml-1"></i>
@@ -193,7 +194,7 @@
           <p class="text-sm text-gray-600 mb-4">
             <i class="fas fa-walking mr-1"></i>Caminando
           </p>
-          <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornejo+325,Ushuaia&destination=Supermercado+Ushuaia&travelmode=walking"
+          <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornero+325,Ushuaia&destination=La+Anonima+Supermercado+Ushuaia&travelmode=walking"
              target="_blank"
              class="text-primary hover:text-primary/80 font-semibold text-sm">
             Ver ruta <i class="fas fa-arrow-right ml-1"></i>
@@ -234,12 +235,12 @@
           <div class="space-y-4">
             <div>
               <h3 class="font-bold text-lg mb-1">Check-in</h3>
-              <p class="text-2xl font-semibold text-gray-700">14:00 hs</p>
+              <p class="text-2xl font-semibold text-gray-700">16:00 hs</p>
             </div>
             <div class="border-t-2 border-gray-200"></div>
             <div>
               <h3 class="font-bold text-lg mb-1">Check-out</h3>
-              <p class="text-2xl font-semibold text-gray-700">10:00 hs</p>
+              <p class="text-2xl font-semibold text-gray-700">12:00 hs</p>
             </div>
           </div>
         </div>
@@ -257,7 +258,7 @@
             </div>
             <div>
               <p class="text-sm text-gray-600">Contraseña:</p>
-              <p class="font-semibold text-gray-800" id="wifi-password">faltacontraseña</p>
+              <p class="font-semibold text-gray-800" id="wifi-password">14973064</p>
             </div>
             <button onclick="copyWifiPassword()"
                     class="bg-secondary hover:bg-secondary/90 text-white font-semibold px-6 py-2 rounded-lg transition-all duration-300 w-full">
@@ -328,44 +329,6 @@
         <p class="text-lg text-gray-600">Los mejores lugares a tu alcance</p>
       </div>
 
-      <!-- Mapa turístico -->
-      <div class="mb-8 animate-on-scroll">
-        <!-- NOTA: Reemplazar con el iframe real de Google My Maps después de crearlo -->
-        <div class="bg-gray-200 rounded-2xl overflow-hidden shadow-lg" style="height: 600px;">
-          <div class="h-full flex items-center justify-center text-gray-500">
-            <div class="text-center p-8">
-              <i class="fas fa-map-marked-alt text-6xl mb-4"></i>
-              <p class="text-lg font-semibold">Mapa interactivo de Ushuaia</p>
-              <p class="text-sm mt-2">Crear en Google My Maps y reemplazar este placeholder</p>
-              <p class="text-xs mt-4 max-w-md">
-                Instrucciones en el código fuente para crear el mapa con todas las capas:<br>
-                Alojamiento (Azul) | Gastronomía (Rojo) | Senderos (Verde) | Cultura (Amarillo)
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Leyenda -->
-      <div class="flex flex-wrap justify-center gap-4 mb-12 animate-on-scroll">
-        <div class="flex items-center">
-          <div class="w-4 h-4 bg-blue-600 rounded-full mr-2"></div>
-          <span class="text-sm font-semibold">PompinHouse</span>
-        </div>
-        <div class="flex items-center">
-          <div class="w-4 h-4 bg-red-600 rounded-full mr-2"></div>
-          <span class="text-sm font-semibold">Gastronomía</span>
-        </div>
-        <div class="flex items-center">
-          <div class="w-4 h-4 bg-green-600 rounded-full mr-2"></div>
-          <span class="text-sm font-semibold">Senderos</span>
-        </div>
-        <div class="flex items-center">
-          <div class="w-4 h-4 bg-yellow-600 rounded-full mr-2"></div>
-          <span class="text-sm font-semibold">Cultura</span>
-        </div>
-      </div>
-
       <!-- Tabs -->
       <div class="animate-on-scroll">
         <!-- Tab buttons -->
@@ -406,9 +369,6 @@
                   <p><i class="fas fa-map-marker-alt mr-2"></i>18 km desde PompinHouse</p>
                 </div>
                 <p class="text-gray-700 mb-4">Sendero icónico de Ushuaia con vistas espectaculares de la laguna color esmeralda.</p>
-                <a href="#" class="text-primary hover:text-primary/80 font-semibold">
-                  Ver en mapa <i class="fas fa-arrow-right ml-1"></i>
-                </a>
               </div>
             </div>
 
@@ -428,15 +388,12 @@
                   <p><i class="fas fa-map-marker-alt mr-2"></i>7 km desde PompinHouse</p>
                 </div>
                 <p class="text-gray-700 mb-4">Sendero accesible con vistas panorámicas de Ushuaia y el canal Beagle.</p>
-                <a href="#" class="text-primary hover:text-primary/80 font-semibold">
-                  Ver en mapa <i class="fas fa-arrow-right ml-1"></i>
-                </a>
               </div>
             </div>
 
             <!-- Sendero 3: Glaciar Vinciguerra -->
             <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-              <div class="h-48 bg-gradient-to-br from-gray-400 to-blue-700"></div>
+              <div class="h-48 bg-cover bg-center" style="background-image: url('assets/images/vicinguerra.jpg');"></div>
               <div class="p-6">
                 <h3 class="text-xl font-bold mb-3 flex items-center">
                   <i class="fas fa-hiking mr-2 text-green-600"></i>
@@ -450,9 +407,6 @@
                   <p><i class="fas fa-map-marker-alt mr-2"></i>7 km desde PompinHouse</p>
                 </div>
                 <p class="text-gray-700 mb-4">Trekking desafiante con recompensas increíbles: glaciar, laguna de los Témpanos.</p>
-                <a href="#" class="text-primary hover:text-primary/80 font-semibold">
-                  Ver en mapa <i class="fas fa-arrow-right ml-1"></i>
-                </a>
               </div>
             </div>
 
@@ -472,9 +426,6 @@
                   <p><i class="fas fa-map-marker-alt mr-2"></i>12 km desde PompinHouse</p>
                 </div>
                 <p class="text-gray-700 mb-4">El único parque nacional con costa marítima de Argentina. Imperdible.</p>
-                <a href="#" class="text-primary hover:text-primary/80 font-semibold">
-                  Ver en mapa <i class="fas fa-arrow-right ml-1"></i>
-                </a>
               </div>
             </div>
 
@@ -494,9 +445,6 @@
                   <p><i class="fas fa-map-marker-alt mr-2"></i>Desde puerto Ushuaia</p>
                 </div>
                 <p class="text-gray-700 mb-4">Icónico faro del Canal Beagle. Navegación con lobos marinos y aves.</p>
-                <a href="#" class="text-primary hover:text-primary/80 font-semibold">
-                  Ver en mapa <i class="fas fa-arrow-right ml-1"></i>
-                </a>
               </div>
             </div>
 
@@ -516,9 +464,6 @@
                   <p><i class="fas fa-map-marker-alt mr-2"></i>Costa Atlántica TdF</p>
                 </div>
                 <p class="text-gray-700 mb-4">Barco Desdemona varado. Paisaje único en la costa atlántica fueguina.</p>
-                <a href="#" class="text-primary hover:text-primary/80 font-semibold">
-                  Ver en mapa <i class="fas fa-arrow-right ml-1"></i>
-                </a>
               </div>
             </div>
           </div>
@@ -538,7 +483,7 @@
                 <i class="fas fa-map-marker-alt mr-1"></i>10 min <i class="fas fa-walking ml-1"></i><br>
                 Maipú 773
               </p>
-              <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornejo+325,Ushuaia&destination=Maipú+773,Ushuaia&travelmode=walking"
+              <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornero+325,Ushuaia&destination=Maipú+773,Ushuaia&travelmode=walking"
                  target="_blank"
                  class="text-primary hover:text-primary/80 font-semibold text-sm">
                 Ver ruta <i class="fas fa-arrow-right ml-1"></i>
@@ -556,7 +501,7 @@
                 <i class="fas fa-map-marker-alt mr-1"></i>12 min <i class="fas fa-walking ml-1"></i><br>
                 9 de Julio 168
               </p>
-              <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornejo+325,Ushuaia&destination=9+de+Julio+168,Ushuaia&travelmode=walking"
+              <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornero+325,Ushuaia&destination=9+de+Julio+168,Ushuaia&travelmode=walking"
                  target="_blank"
                  class="text-primary hover:text-primary/80 font-semibold text-sm">
                 Ver ruta <i class="fas fa-arrow-right ml-1"></i>
@@ -574,7 +519,7 @@
                 <i class="fas fa-map-marker-alt mr-1"></i>8 min <i class="fas fa-walking ml-1"></i><br>
                 San Martín 859
               </p>
-              <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornejo+325,Ushuaia&destination=San+Martín+859,Ushuaia&travelmode=walking"
+              <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornero+325,Ushuaia&destination=San+Martín+859,Ushuaia&travelmode=walking"
                  target="_blank"
                  class="text-primary hover:text-primary/80 font-semibold text-sm">
                 Ver ruta <i class="fas fa-arrow-right ml-1"></i>
@@ -592,7 +537,7 @@
                 <i class="fas fa-map-marker-alt mr-1"></i>10 min <i class="fas fa-walking ml-1"></i><br>
                 Gob. P. Godoy 15
               </p>
-              <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornejo+325,Ushuaia&destination=Gob.+P.+Godoy+15,Ushuaia&travelmode=walking"
+              <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornero+325,Ushuaia&destination=Gob.+P.+Godoy+15,Ushuaia&travelmode=walking"
                  target="_blank"
                  class="text-primary hover:text-primary/80 font-semibold text-sm">
                 Ver ruta <i class="fas fa-arrow-right ml-1"></i>
@@ -610,7 +555,7 @@
                 <i class="fas fa-map-marker-alt mr-1"></i>9 min <i class="fas fa-walking ml-1"></i><br>
                 San Martín 701
               </p>
-              <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornejo+325,Ushuaia&destination=San+Martín+701,Ushuaia&travelmode=walking"
+              <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornero+325,Ushuaia&destination=San+Martín+701,Ushuaia&travelmode=walking"
                  target="_blank"
                  class="text-primary hover:text-primary/80 font-semibold text-sm">
                 Ver ruta <i class="fas fa-arrow-right ml-1"></i>
@@ -628,7 +573,7 @@
                 <i class="fas fa-map-marker-alt mr-1"></i>7 min <i class="fas fa-walking ml-1"></i><br>
                 Maipú 749
               </p>
-              <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornejo+325,Ushuaia&destination=Maipú+749,Ushuaia&travelmode=walking"
+              <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornero+325,Ushuaia&destination=Maipú+749,Ushuaia&travelmode=walking"
                  target="_blank"
                  class="text-primary hover:text-primary/80 font-semibold text-sm">
                 Ver ruta <i class="fas fa-arrow-right ml-1"></i>
@@ -656,7 +601,7 @@
                   pasando por la prisión más austral del mundo, hasta convertirse en la ciudad que es hoy.
                   Imperdible para entender el contexto histórico del Fin del Mundo.
                 </p>
-                <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornejo+325,Ushuaia&destination=Museo+Maritimo+Ushuaia&travelmode=walking"
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Gobernador+Cornero+325,Ushuaia&destination=Museo+Maritimo+Ushuaia&travelmode=walking"
                    target="_blank"
                    class="text-primary hover:text-primary/80 font-semibold">
                   Ver ruta <i class="fas fa-arrow-right ml-1"></i>
@@ -667,14 +612,6 @@
         </div>
       </div>
 
-      <!-- Botón descargar PDF -->
-      <div class="text-center mt-12 animate-on-scroll">
-        <a href="assets/documents/mapa-ushuaia.pdf"
-           download
-           class="inline-block bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300">
-          <i class="fas fa-download mr-2"></i>Descargar mapa completo PDF
-        </a>
-      </div>
     </div>
   </section>
 
@@ -941,46 +878,7 @@
           </div>
         </div>
 
-        <!-- Item 3: Dinero -->
-        <div class="bg-white rounded-xl shadow-md overflow-hidden animate-on-scroll">
-          <button onclick="toggleAccordion('dinero')"
-                  class="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-gray-50 transition-all duration-300">
-            <span class="font-bold text-lg">
-              <i class="fas fa-credit-card mr-3 text-accent"></i>
-              Dinero y pagos
-            </span>
-            <i class="fas fa-plus accordion-icon" id="icon-dinero"></i>
-          </button>
-          <div id="content-dinero" class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
-            <div class="px-6 pb-6">
-              <div class="border-t-2 border-gray-200 my-4"></div>
-              <p class="font-semibold mb-2">
-                <i class="fas fa-money-bill-wave mr-2"></i>Cajeros: Av. San Martín
-              </p>
-              <p class="text-gray-600 mb-4">(zona centro)</p>
-
-              <p class="font-semibold mb-2">
-                <i class="fas fa-credit-card mr-2"></i>La mayoría acepta tarjeta
-              </p>
-              <p class="text-gray-600 mb-4">Visa/Mastercard común</p>
-
-              <p class="font-semibold mb-3">
-                <i class="fas fa-dollar-sign mr-2"></i>Efectivo recomendado para:
-              </p>
-              <ul class="space-y-2 text-gray-700 mb-4">
-                <li>• Propinas (10%)</li>
-                <li>• Puestos callejeros</li>
-                <li>• Algunos remises</li>
-              </ul>
-
-              <p class="text-gray-700">
-                <i class="fas fa-exchange-alt mr-2"></i>Cambio: casas de cambio en San Martín
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Item 4: Emergencias -->
+        <!-- Item 3: Emergencias -->
         <div class="bg-white rounded-xl shadow-md overflow-hidden animate-on-scroll">
           <button onclick="toggleAccordion('emergencias')"
                   class="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-gray-50 transition-all duration-300">
@@ -993,11 +891,22 @@
           <div id="content-emergencias" class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
             <div class="px-6 pb-6">
               <div class="border-t-2 border-gray-200 my-4"></div>
-              <div class="space-y-3 text-gray-700 mb-4">
-                <p><i class="fas fa-phone-alt mr-2"></i><strong>Emergencias general:</strong> 911</p>
-                <p><i class="fas fa-hospital mr-2"></i><strong>Hospital:</strong> (02901) 442-900</p>
-                <p><i class="fas fa-shield-alt mr-2"></i><strong>Policía:</strong> 101</p>
-                <p><i class="fas fa-fire-extinguisher mr-2"></i><strong>Bomberos:</strong> 100</p>
+
+              <h4 class="font-bold text-lg mb-3">Números de Emergencia Generales (Argentina)</h4>
+              <div class="space-y-2 text-gray-700 mb-4">
+                <p><i class="fas fa-phone-alt mr-2"></i><strong>911 / 101:</strong> Policía y Emergencias Generales</p>
+                <p><i class="fas fa-fire-extinguisher mr-2"></i><strong>100:</strong> Bomberos (incendios, rescates)</p>
+                <p><i class="fas fa-hospital mr-2"></i><strong>107:</strong> Emergencias Médicas (SAME)</p>
+                <p><i class="fas fa-shield-alt mr-2"></i><strong>103:</strong> Defensa Civil (desastres naturales, asistencia humanitaria)</p>
+              </div>
+
+              <div class="border-t-2 border-gray-200 my-4"></div>
+
+              <h4 class="font-bold text-lg mb-3">Contactos Específicos de Ushuaia</h4>
+              <div class="space-y-2 text-gray-700 mb-4">
+                <p><i class="fas fa-shield-alt mr-2"></i><strong>Defensa Civil Ushuaia:</strong> 103 (24hs), (02901) 422108, (02901) 435316</p>
+                <p><i class="fas fa-phone-alt mr-2"></i><strong>Policía:</strong> (02901) 421355, 421416</p>
+                <p><i class="fas fa-fire-extinguisher mr-2"></i><strong>Bomberos Cuartel Central:</strong> (02901) 421333, 432800</p>
               </div>
 
               <div class="border-t-2 border-gray-200 my-4"></div>
@@ -1011,12 +920,6 @@
                  class="inline-block bg-[#25D366] hover:bg-[#25D366]/90 text-white font-semibold px-4 py-2 rounded-lg transition-all duration-300">
                 <i class="fab fa-whatsapp mr-2"></i>WhatsApp
               </a>
-
-              <div class="border-t-2 border-gray-200 my-4"></div>
-
-              <p class="text-gray-600">
-                <i class="fas fa-taxi mr-2"></i>Remis recomendado: Ver sección Servicios ↑
-              </p>
             </div>
           </div>
         </div>
@@ -1057,7 +960,7 @@
             <i class="fas fa-map-marker-alt mr-2"></i>Dirección
           </h4>
           <div class="text-white/90">
-            <p>Gobernador Cornejo 325</p>
+            <p>Gobernador Cornero 325</p>
             <p>Ushuaia, Tierra del Fuego</p>
             <p>Argentina</p>
           </div>
