@@ -181,8 +181,7 @@ const translations = {
           "Trekking personalizado",
           "Consultar precios"
         ],
-        include: "Incluye: Transporte + Equipo + Seguridad + Fotos profesionales",
-        discount: "Descuento especial<br><span class='text-sm font-normal'>mencionando PompinHouse</span>"
+        discount: "Desconto especial<br><span class='text-sm font-normal'>mencionando PompinHouse</span>"
       },
       transport: {
         name: "Xalpen Transportes",
@@ -195,7 +194,6 @@ const translations = {
           "Traslados personalizados",
           "Consultar precios y disponibilidad"
         ],
-        vehicle: "Vehículos: 4x4 + Van turística",
         discount: "10% OFF<br><span class='text-sm font-normal'>mencionando PompinHouse</span>"
       },
       disclaimer: "Nota: Servicios independientes recomendados. Precios orientativos actualizados a Diciembre 2024. PompinHouse no cobra comisión."
@@ -435,7 +433,6 @@ const translations = {
           "Custom Trekking",
           "Ask for prices"
         ],
-        include: "Includes: Transport + Equipment + Safety + Professional Photos",
         discount: "Special discount<br><span class='text-sm font-normal'>mentioning PompinHouse</span>"
       },
       transport: {
@@ -449,7 +446,6 @@ const translations = {
           "Custom transfers",
           "Ask for prices and availability"
         ],
-        vehicle: "Vehicles: 4x4 + Tourist Van",
         discount: "10% OFF<br><span class='text-sm font-normal'>mentioning PompinHouse</span>"
       },
       disclaimer: "Note: Recommended independent services. Indicative prices updated December 2024. PompinHouse charges no commission."
@@ -689,7 +685,6 @@ const translations = {
           "Trekking personnalisé",
           "Consulter les prix"
         ],
-        include: "Inclus : Transport + Équipement + Sécurité + Photos pro",
         discount: "Réduction spéciale<br><span class='text-sm font-normal'>mentionnant PompinHouse</span>"
       },
       transport: {
@@ -703,7 +698,6 @@ const translations = {
           "Transferts personnalisés",
           "Consulter prix et dispo"
         ],
-        vehicle: "Véhicules : 4x4 + Van touristique",
         discount: "10% OFF<br><span class='text-sm font-normal'>mentionnant PompinHouse</span>"
       },
       disclaimer: "Note : Services indépendants recommandés. Prix indicatifs mis à jour en décembre 2024. PompinHouse ne prend aucune commission."
@@ -943,7 +937,6 @@ const translations = {
           "Trekking personalizado",
           "Consultar preços"
         ],
-        include: "Inclui: Transporte + Equipamento + Segurança + Fotos pro",
         discount: "Desconto especial<br><span class='text-sm font-normal'>mencionando PompinHouse</span>"
       },
       transport: {
@@ -957,7 +950,6 @@ const translations = {
           "Traslados personalizados",
           "Consultar preços e disp."
         ],
-        vehicle: "Veículos: 4x4 + Van turística",
         discount: "10% OFF<br><span class='text-sm font-normal'>mencionando PompinHouse</span>"
       },
       disclaimer: "Nota: Serviços independentes recomendados. Preços indicativos atualizados em Dezembro 2024. PompinHouse não cobra comissão."
