@@ -196,6 +196,20 @@ const translations = {
         ],
         discount: "10% OFF<br><span class='text-sm font-normal'>mencionando PompinHouse</span>"
       },
+      locker: {
+        name: "uLocker",
+        role: "Guardaequipaje Inteligente",
+        description: "¿Llegás antes de las 16:00 hs (check-in)? Guardá tus maletas en uLocker y disfrutá de Ushuaia sin cargar equipaje.",
+        featuresTitle: "Características:",
+        features: [
+          "Casilleros seguros 24/7",
+          "Ubicación céntrica",
+          "Reserva online fácil",
+          "Ideal para check-in temprano"
+        ],
+        reserveButton: "Reservar Casillero",
+        tip: "Check-in: 16:00 hs | Check-out: 10:00 am<br><span class='text-sm font-normal'>Usá uLocker para aprovechar tu tiempo</span>"
+      },
       disclaimer: "Nota: Servicios independientes recomendados. Precios orientativos actualizados a Diciembre 2024. PompinHouse no cobra comisión."
     },
     tips: {
@@ -447,6 +461,20 @@ const translations = {
           "Ask for prices and availability"
         ],
         discount: "10% OFF<br><span class='text-sm font-normal'>mentioning PompinHouse</span>"
+      },
+      locker: {
+        name: "uLocker",
+        role: "Smart Luggage Storage",
+        description: "Arriving before 4:00 PM (check-in)? Store your bags at uLocker and enjoy Ushuaia hands-free.",
+        featuresTitle: "Features:",
+        features: [
+          "Secure lockers 24/7",
+          "Central location",
+          "Easy online booking",
+          "Ideal for early arrivals"
+        ],
+        reserveButton: "Reserve Locker",
+        tip: "Check-in: 4:00 PM | Check-out: 10:00 AM<br><span class='text-sm font-normal'>Use uLocker to make the most of your time</span>"
       },
       disclaimer: "Note: Recommended independent services. Indicative prices updated December 2024. PompinHouse charges no commission."
     },
@@ -700,6 +728,20 @@ const translations = {
         ],
         discount: "10% OFF<br><span class='text-sm font-normal'>mentionnant PompinHouse</span>"
       },
+      locker: {
+        name: "uLocker",
+        role: "Consigne Intelligente",
+        description: "Vous arrivez avant 16h (check-in) ? Déposez vos bagages chez uLocker et profitez d'Ushuaia les mains libres.",
+        featuresTitle: "Caractéristiques :",
+        features: [
+          "Casiers sécurisés 24/7",
+          "Emplacement central",
+          "Réservation en ligne facile",
+          "Idéal pour arrivée anticipée"
+        ],
+        reserveButton: "Réserver un casier",
+        tip: "Check-in : 16h | Check-out : 10h<br><span class='text-sm font-normal'>Utilisez uLocker pour profiter de votre temps</span>"
+      },
       disclaimer: "Note : Services indépendants recommandés. Prix indicatifs mis à jour en décembre 2024. PompinHouse ne prend aucune commission."
     },
     tips: {
@@ -951,6 +993,20 @@ const translations = {
           "Consultar preços e disp."
         ],
         discount: "10% OFF<br><span class='text-sm font-normal'>mencionando PompinHouse</span>"
+      },
+      locker: {
+        name: "uLocker",
+        role: "Guarda-volumes Inteligente",
+        description: "Chega antes das 16h (check-in)? Guarde suas malas no uLocker e aproveite Ushuaia sem carregar bagagem.",
+        featuresTitle: "Características:",
+        features: [
+          "Armários seguros 24/7",
+          "Localização central",
+          "Reserva online fácil",
+          "Ideal para chegada antecipada"
+        ],
+        reserveButton: "Reservar Armário",
+        tip: "Check-in: 16h | Check-out: 10h<br><span class='text-sm font-normal'>Use uLocker para aproveitar seu tempo</span>"
       },
       disclaimer: "Nota: Serviços independentes recomendados. Preços indicativos atualizados em Dezembro 2024. PompinHouse não cobra comissão."
     },
